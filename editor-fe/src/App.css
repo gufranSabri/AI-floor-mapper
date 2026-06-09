@@ -1,0 +1,103 @@
+/* ── Roadmap bar ─────────────────────────────────────────────────────────────*/
+
+.roadmap-bar {
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+  padding: 7px 20px;
+  flex-shrink: 0;
+}
+
+.roadmap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.roadmap__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.roadmap__step--clickable {
+  cursor: pointer;
+}
+
+.roadmap__step--clickable:hover .roadmap__circle--done {
+  background: #155e53;
+  border-color: #155e53;
+}
+
+.roadmap__step--clickable:hover .roadmap__label {
+  color: var(--accent);
+}
+
+.roadmap__connector {
+  position: absolute;
+  top: 9px;
+  right: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--line);
+  transition: background 0.25s;
+}
+
+.roadmap__connector--done {
+  background: var(--accent);
+}
+
+.roadmap__circle {
+  position: relative;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+  border: 2px solid var(--line);
+  background: var(--surface);
+  color: var(--muted);
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
+}
+
+.roadmap__circle--done {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.roadmap__circle--active {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(28, 107, 94, 0.12);
+}
+
+.roadmap__circle--inactive {
+  opacity: 0.4;
+}
+
+.roadmap__label {
+  margin-top: 3px;
+  font-size: 0.58rem;
+  font-weight: 500;
+  color: var(--muted);
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  transition: color 0.25s;
+}
+
+.roadmap__label--active {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.roadmap__label--inactive {
+  opacity: 0.4;
+}

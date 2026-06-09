@@ -1,0 +1,26 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: editor-be/Dockerfile
+    environment:
+      OUTPUT_DIR: /app/editor-be/uploads
+      YOLO_WEIGHTS: /app/floor_ingestion/detector/yolo/runs/cubicasa_yolo26m/weights/best.pt
+      UPLOAD_SECRET: ${UPLOAD_SECRET:-e48af7783f205f8778a25b2bfaa6761dfb7285340ca31cf4127329c2885a37a6}
+      PORT: "5001"
+    volumes:
+      - uploads:/app/editor-be/uploads
+    ports:
+      - "5001:5001"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: editor-fe/Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  uploads:

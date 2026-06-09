@@ -1,0 +1,54 @@
+/* ── Room detecting overlay ──────────────────────────────────────────────────*/
+
+.room-detecting-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(244, 240, 231, 0.6);
+  backdrop-filter: blur(4px);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--muted);
+  z-index: 10;
+}
+
+/* ── Rename modal ─────────────────────────────────────────────────────────────*/
+
+.room-rename-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(23, 33, 43, 0.32);
+  backdrop-filter: blur(3px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room-rename-modal {
+  background: var(--surface-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 28px 32px;
+  width: 360px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.room-rename-modal__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.room-rename-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+}

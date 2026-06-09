@@ -1,0 +1,4444 @@
+{
+  "metadata": {
+    "source": "/Users/gufran/Developer/Projects/Misc/AI-floor-mapper/floor_ingestion/data/AramcoFloorplans/al-midra_cleaned/3RD_FLOOR_WEST.png",
+    "image_size": {
+      "width": 1258,
+      "height": 848
+    }
+  },
+  "elements": {
+    "walls": [
+      {
+        "id": 1,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [1250, 12],
+          [78, 12]
+        ],
+        "connected_to": [
+          {
+            "id": 2,
+            "point": [78, 12]
+          },
+          {
+            "id": 366,
+            "point": [1250, 12]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [78, 12],
+          [79, 250]
+        ],
+        "connected_to": [
+          {
+            "id": 1,
+            "point": [78, 12]
+          },
+          {
+            "id": 3,
+            "point": [79, 250]
+          },
+          {
+            "id": 195,
+            "point": [79, 250]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [79, 250],
+          [18, 248]
+        ],
+        "connected_to": [
+          {
+            "id": 2,
+            "point": [79, 250]
+          },
+          {
+            "id": 4,
+            "point": [18, 248]
+          },
+          {
+            "id": 195,
+            "point": [79, 250]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [18, 248],
+          [18, 451]
+        ],
+        "connected_to": [
+          {
+            "id": 3,
+            "point": [18, 248]
+          },
+          {
+            "id": 322,
+            "point": [18, 451]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [78, 449],
+          [78, 680]
+        ],
+        "connected_to": [
+          {
+            "id": 217,
+            "point": [78, 449]
+          },
+          {
+            "id": 321,
+            "point": [78, 449]
+          },
+          {
+            "id": 323,
+            "point": [78, 449]
+          },
+          {
+            "id": 325,
+            "point": [78, 680]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [952, 680],
+          [952, 839]
+        ],
+        "connected_to": [
+          {
+            "id": 9,
+            "point": [952, 839]
+          },
+          {
+            "id": 326,
+            "point": [952, 680]
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [952, 839],
+          [1136, 839]
+        ],
+        "connected_to": [
+          {
+            "id": 8,
+            "point": [952, 839]
+          },
+          {
+            "id": 364,
+            "point": [1136, 839]
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [1136, 682],
+          [1250, 682]
+        ],
+        "connected_to": [
+          {
+            "id": 363,
+            "point": [1136, 682]
+          },
+          {
+            "id": 367,
+            "point": [1250, 682]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [184, 260],
+          [184, 333]
+        ],
+        "connected_to": [
+          {
+            "id": 30,
+            "point": [185, 333]
+          },
+          {
+            "id": 327,
+            "point": [184, 260]
+          },
+          {
+            "id": 329,
+            "point": [184, 260]
+          },
+          {
+            "id": 330,
+            "point": [185, 333]
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [126, 27],
+          [211, 27]
+        ],
+        "connected_to": [
+          {
+            "id": 18,
+            "point": [211, 27]
+          },
+          {
+            "id": 371,
+            "point": [126, 27]
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [211, 27],
+          [211, 114]
+        ],
+        "connected_to": [
+          {
+            "id": 17,
+            "point": [211, 27]
+          },
+          {
+            "id": 19,
+            "point": [211, 114]
+          },
+          {
+            "id": 46,
+            "point": [211, 114]
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [211, 114],
+          [128, 114]
+        ],
+        "connected_to": [
+          {
+            "id": 18,
+            "point": [211, 114]
+          },
+          {
+            "id": 46,
+            "point": [211, 114]
+          },
+          {
+            "id": 48,
+            "point": [128, 114]
+          },
+          {
+            "id": 371,
+            "point": [128, 114]
+          },
+          {
+            "id": 372,
+            "point": [128, 114]
+          }
+        ]
+      },
+      {
+        "id": 30,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [185, 333],
+          [186, 404]
+        ],
+        "connected_to": [
+          {
+            "id": 14,
+            "point": [184, 333]
+          },
+          {
+            "id": 114,
+            "point": [186, 404]
+          },
+          {
+            "id": 330,
+            "point": [185, 333]
+          },
+          {
+            "id": 338,
+            "point": [186, 404]
+          }
+        ]
+      },
+      {
+        "id": 32,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [103, 404],
+          [104, 333]
+        ],
+        "connected_to": [
+          {
+            "id": 116,
+            "point": [102, 404]
+          },
+          {
+            "id": 330,
+            "point": [104, 333]
+          },
+          {
+            "id": 338,
+            "point": [102, 404]
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1030, 261],
+          [972, 261]
+        ],
+        "connected_to": [
+          {
+            "id": 36,
+            "point": [972, 261]
+          },
+          {
+            "id": 373,
+            "point": [1030, 261]
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [972, 261],
+          [972, 176]
+        ],
+        "connected_to": [
+          {
+            "id": 35,
+            "point": [972, 261]
+          },
+          {
+            "id": 68,
+            "point": [972, 174]
+          },
+          {
+            "id": 340,
+            "point": [972, 176]
+          }
+        ]
+      },
+      {
+        "id": 41,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1132, 154],
+          [1238, 156]
+        ],
+        "connected_to": [
+          {
+            "id": 44,
+            "point": [1132, 154]
+          },
+          {
+            "id": 365,
+            "point": [1238, 156]
+          },
+          {
+            "id": 366,
+            "point": [1238, 156]
+          }
+        ]
+      },
+      {
+        "id": 44,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1132, 311],
+          [1132, 154]
+        ],
+        "connected_to": [
+          {
+            "id": 41,
+            "point": [1132, 154]
+          },
+          {
+            "id": 144,
+            "point": [1132, 311]
+          },
+          {
+            "id": 345,
+            "point": [1132, 311]
+          }
+        ]
+      },
+      {
+        "id": 46,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [211, 114],
+          [211, 181]
+        ],
+        "connected_to": [
+          {
+            "id": 18,
+            "point": [211, 114]
+          },
+          {
+            "id": 19,
+            "point": [211, 114]
+          },
+          {
+            "id": 47,
+            "point": [211, 181]
+          },
+          {
+            "id": 62,
+            "point": [211, 182]
+          }
+        ]
+      },
+      {
+        "id": 47,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [211, 181],
+          [132, 181]
+        ],
+        "connected_to": [
+          {
+            "id": 46,
+            "point": [211, 181]
+          },
+          {
+            "id": 48,
+            "point": [132, 181]
+          },
+          {
+            "id": 62,
+            "point": [211, 182]
+          },
+          {
+            "id": 64,
+            "point": [132, 182]
+          }
+        ]
+      },
+      {
+        "id": 48,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [132, 181],
+          [128, 114]
+        ],
+        "connected_to": [
+          {
+            "id": 19,
+            "point": [128, 114]
+          },
+          {
+            "id": 47,
+            "point": [132, 181]
+          },
+          {
+            "id": 64,
+            "point": [132, 182]
+          },
+          {
+            "id": 371,
+            "point": [128, 114]
+          },
+          {
+            "id": 372,
+            "point": [128, 114]
+          }
+        ]
+      },
+      {
+        "id": 49,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1048, 443],
+          [1086, 443]
+        ],
+        "connected_to": [
+          {
+            "id": 50,
+            "point": [1086, 443]
+          },
+          {
+            "id": 52,
+            "point": [1048, 443]
+          },
+          {
+            "id": 53,
+            "point": [1047, 443]
+          }
+        ]
+      },
+      {
+        "id": 50,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1086, 443],
+          [1086, 498]
+        ],
+        "connected_to": [
+          {
+            "id": 49,
+            "point": [1086, 443]
+          },
+          {
+            "id": 51,
+            "point": [1086, 498]
+          }
+        ]
+      },
+      {
+        "id": 51,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1086, 498],
+          [1048, 498]
+        ],
+        "connected_to": [
+          {
+            "id": 50,
+            "point": [1086, 498]
+          },
+          {
+            "id": 52,
+            "point": [1048, 498]
+          },
+          {
+            "id": 101,
+            "point": [1048, 498]
+          },
+          {
+            "id": 102,
+            "point": [1048, 498]
+          }
+        ]
+      },
+      {
+        "id": 52,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1048, 498],
+          [1048, 443]
+        ],
+        "connected_to": [
+          {
+            "id": 49,
+            "point": [1048, 443]
+          },
+          {
+            "id": 51,
+            "point": [1048, 498]
+          },
+          {
+            "id": 53,
+            "point": [1047, 443]
+          },
+          {
+            "id": 101,
+            "point": [1048, 498]
+          },
+          {
+            "id": 102,
+            "point": [1048, 498]
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1008, 444],
+          [1047, 443]
+        ],
+        "connected_to": [
+          {
+            "id": 49,
+            "point": [1048, 443]
+          },
+          {
+            "id": 52,
+            "point": [1048, 443]
+          },
+          {
+            "id": 93,
+            "point": [1008, 444]
+          }
+        ]
+      },
+      {
+        "id": 57,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [290, 299],
+          [351, 298]
+        ],
+        "connected_to": [
+          {
+            "id": 58,
+            "point": [351, 298]
+          },
+          {
+            "id": 73,
+            "point": [290, 299]
+          },
+          {
+            "id": 81,
+            "point": [351, 298]
+          },
+          {
+            "id": 380,
+            "point": [290, 299]
+          }
+        ]
+      },
+      {
+        "id": 58,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [351, 298],
+          [353, 354]
+        ],
+        "connected_to": [
+          {
+            "id": 57,
+            "point": [351, 298]
+          },
+          {
+            "id": 81,
+            "point": [351, 298]
+          },
+          {
+            "id": 83,
+            "point": [353, 354]
+          },
+          {
+            "id": 176,
+            "point": [353, 354]
+          },
+          {
+            "id": 354,
+            "point": [353, 354]
+          }
+        ]
+      },
+      {
+        "id": 62,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [211, 182],
+          [211, 256]
+        ],
+        "connected_to": [
+          {
+            "id": 46,
+            "point": [211, 181]
+          },
+          {
+            "id": 47,
+            "point": [211, 181]
+          },
+          {
+            "id": 329,
+            "point": [211, 256]
+          }
+        ]
+      },
+      {
+        "id": 64,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [133, 260],
+          [132, 182]
+        ],
+        "connected_to": [
+          {
+            "id": 47,
+            "point": [132, 181]
+          },
+          {
+            "id": 48,
+            "point": [132, 181]
+          },
+          {
+            "id": 327,
+            "point": [133, 260]
+          },
+          {
+            "id": 328,
+            "point": [133, 260]
+          }
+        ]
+      },
+      {
+        "id": 68,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [972, 174],
+          [972, 107]
+        ],
+        "connected_to": [
+          {
+            "id": 36,
+            "point": [972, 176]
+          },
+          {
+            "id": 204,
+            "point": [972, 107]
+          },
+          {
+            "id": 340,
+            "point": [972, 176]
+          },
+          {
+            "id": 346,
+            "point": [972, 107]
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1082, 65],
+          [1084, 104]
+        ],
+        "connected_to": [
+          {
+            "id": 71,
+            "point": [1084, 104]
+          },
+          {
+            "id": 158,
+            "point": [1082, 65]
+          },
+          {
+            "id": 349,
+            "point": [1082, 65]
+          }
+        ]
+      },
+      {
+        "id": 71,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1084, 104],
+          [1058, 105]
+        ],
+        "connected_to": [
+          {
+            "id": 70,
+            "point": [1084, 104]
+          },
+          {
+            "id": 335,
+            "point": [1059, 106]
+          },
+          {
+            "id": 374,
+            "point": [1059, 106]
+          },
+          {
+            "id": 381,
+            "point": [1058, 106]
+          }
+        ]
+      },
+      {
+        "id": 73,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [226, 299],
+          [290, 299]
+        ],
+        "connected_to": [
+          {
+            "id": 57,
+            "point": [290, 299]
+          },
+          {
+            "id": 76,
+            "point": [226, 299]
+          },
+          {
+            "id": 380,
+            "point": [290, 299]
+          }
+        ]
+      },
+      {
+        "id": 76,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [226, 354],
+          [226, 299]
+        ],
+        "connected_to": [
+          {
+            "id": 73,
+            "point": [226, 299]
+          },
+          {
+            "id": 353,
+            "point": [226, 354]
+          }
+        ]
+      },
+      {
+        "id": 77,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [668, 93],
+          [745, 93]
+        ],
+        "connected_to": [
+          {
+            "id": 78,
+            "point": [745, 93]
+          },
+          {
+            "id": 80,
+            "point": [668, 93]
+          },
+          {
+            "id": 130,
+            "point": [745, 92]
+          },
+          {
+            "id": 132,
+            "point": [668, 92]
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [745, 93],
+          [745, 158]
+        ],
+        "connected_to": [
+          {
+            "id": 77,
+            "point": [745, 93]
+          },
+          {
+            "id": 79,
+            "point": [745, 158]
+          },
+          {
+            "id": 130,
+            "point": [745, 92]
+          },
+          {
+            "id": 154,
+            "point": [745, 159]
+          }
+        ]
+      },
+      {
+        "id": 79,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [745, 158],
+          [668, 158]
+        ],
+        "connected_to": [
+          {
+            "id": 78,
+            "point": [745, 158]
+          },
+          {
+            "id": 80,
+            "point": [668, 158]
+          },
+          {
+            "id": 154,
+            "point": [745, 159]
+          },
+          {
+            "id": 156,
+            "point": [668, 159]
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [668, 158],
+          [668, 93]
+        ],
+        "connected_to": [
+          {
+            "id": 77,
+            "point": [668, 93]
+          },
+          {
+            "id": 79,
+            "point": [668, 158]
+          },
+          {
+            "id": 132,
+            "point": [668, 92]
+          },
+          {
+            "id": 156,
+            "point": [668, 159]
+          }
+        ]
+      },
+      {
+        "id": 81,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [351, 298],
+          [414, 299]
+        ],
+        "connected_to": [
+          {
+            "id": 57,
+            "point": [351, 298]
+          },
+          {
+            "id": 58,
+            "point": [351, 298]
+          },
+          {
+            "id": 82,
+            "point": [414, 299]
+          }
+        ]
+      },
+      {
+        "id": 82,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [414, 299],
+          [414, 353]
+        ],
+        "connected_to": [
+          {
+            "id": 81,
+            "point": [414, 299]
+          },
+          {
+            "id": 83,
+            "point": [414, 353]
+          },
+          {
+            "id": 174,
+            "point": [414, 354]
+          }
+        ]
+      },
+      {
+        "id": 83,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [414, 353],
+          [353, 354]
+        ],
+        "connected_to": [
+          {
+            "id": 58,
+            "point": [353, 354]
+          },
+          {
+            "id": 82,
+            "point": [414, 353]
+          },
+          {
+            "id": 174,
+            "point": [414, 354]
+          },
+          {
+            "id": 176,
+            "point": [353, 354]
+          },
+          {
+            "id": 354,
+            "point": [353, 354]
+          }
+        ]
+      },
+      {
+        "id": 89,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1057, 604],
+          [1084, 602]
+        ],
+        "connected_to": [
+          {
+            "id": 90,
+            "point": [1084, 602]
+          },
+          {
+            "id": 181,
+            "point": [1057, 603]
+          },
+          {
+            "id": 382,
+            "point": [1057, 603]
+          }
+        ]
+      },
+      {
+        "id": 90,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1084, 602],
+          [1080, 637]
+        ],
+        "connected_to": [
+          {
+            "id": 89,
+            "point": [1084, 602]
+          },
+          {
+            "id": 261,
+            "point": [1080, 637]
+          },
+          {
+            "id": 355,
+            "point": [1080, 637]
+          }
+        ]
+      },
+      {
+        "id": 93,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [971, 444],
+          [1008, 444]
+        ],
+        "connected_to": [
+          {
+            "id": 53,
+            "point": [1008, 444]
+          },
+          {
+            "id": 96,
+            "point": [971, 444]
+          }
+        ]
+      },
+      {
+        "id": 96,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [972, 498],
+          [971, 444]
+        ],
+        "connected_to": [
+          {
+            "id": 93,
+            "point": [971, 444]
+          },
+          {
+            "id": 101,
+            "point": [972, 498]
+          },
+          {
+            "id": 104,
+            "point": [972, 498]
+          }
+        ]
+      },
+      {
+        "id": 99,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [355, 408],
+          [257, 407]
+        ],
+        "connected_to": [
+          {
+            "id": 100,
+            "point": [257, 407]
+          },
+          {
+            "id": 175,
+            "point": [354, 408]
+          },
+          {
+            "id": 176,
+            "point": [355, 408]
+          }
+        ]
+      },
+      {
+        "id": 100,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [257, 407],
+          [257, 355]
+        ],
+        "connected_to": [
+          {
+            "id": 99,
+            "point": [257, 407]
+          },
+          {
+            "id": 352,
+            "point": [257, 355]
+          },
+          {
+            "id": 353,
+            "point": [257, 355]
+          }
+        ]
+      },
+      {
+        "id": 101,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [972, 498],
+          [1048, 498]
+        ],
+        "connected_to": [
+          {
+            "id": 51,
+            "point": [1048, 498]
+          },
+          {
+            "id": 52,
+            "point": [1048, 498]
+          },
+          {
+            "id": 96,
+            "point": [972, 498]
+          },
+          {
+            "id": 102,
+            "point": [1048, 498]
+          },
+          {
+            "id": 104,
+            "point": [972, 498]
+          }
+        ]
+      },
+      {
+        "id": 102,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1048, 498],
+          [1047, 563]
+        ],
+        "connected_to": [
+          {
+            "id": 51,
+            "point": [1048, 498]
+          },
+          {
+            "id": 52,
+            "point": [1048, 498]
+          },
+          {
+            "id": 101,
+            "point": [1048, 498]
+          },
+          {
+            "id": 103,
+            "point": [1047, 563]
+          }
+        ]
+      },
+      {
+        "id": 103,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1047, 563],
+          [972, 563]
+        ],
+        "connected_to": [
+          {
+            "id": 102,
+            "point": [1047, 563]
+          },
+          {
+            "id": 104,
+            "point": [972, 563]
+          }
+        ]
+      },
+      {
+        "id": 104,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [972, 563],
+          [972, 498]
+        ],
+        "connected_to": [
+          {
+            "id": 96,
+            "point": [972, 498]
+          },
+          {
+            "id": 101,
+            "point": [972, 498]
+          },
+          {
+            "id": 103,
+            "point": [972, 563]
+          }
+        ]
+      },
+      {
+        "id": 111,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1136, 827],
+          [963, 827]
+        ],
+        "connected_to": [
+          {
+            "id": 112,
+            "point": [963, 827]
+          },
+          {
+            "id": 362,
+            "point": [1136, 827]
+          },
+          {
+            "id": 364,
+            "point": [1136, 827]
+          }
+        ]
+      },
+      {
+        "id": 112,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [963, 827],
+          [963, 772]
+        ],
+        "connected_to": [
+          {
+            "id": 111,
+            "point": [963, 827]
+          },
+          {
+            "id": 192,
+            "point": [963, 772]
+          },
+          {
+            "id": 358,
+            "point": [963, 772]
+          }
+        ]
+      },
+      {
+        "id": 114,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [186, 404],
+          [187, 455]
+        ],
+        "connected_to": [
+          {
+            "id": 30,
+            "point": [186, 404]
+          },
+          {
+            "id": 338,
+            "point": [186, 404]
+          },
+          {
+            "id": 342,
+            "point": [187, 455]
+          }
+        ]
+      },
+      {
+        "id": 116,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [97, 450],
+          [102, 404]
+        ],
+        "connected_to": [
+          {
+            "id": 32,
+            "point": [103, 404]
+          },
+          {
+            "id": 323,
+            "point": [97, 450]
+          },
+          {
+            "id": 338,
+            "point": [102, 404]
+          },
+          {
+            "id": 344,
+            "point": [97, 450]
+          },
+          {
+            "id": 370,
+            "point": [97, 450]
+          }
+        ]
+      },
+      {
+        "id": 121,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [990, 298],
+          [1072, 298]
+        ],
+        "connected_to": [
+          {
+            "id": 122,
+            "point": [1072, 298]
+          },
+          {
+            "id": 124,
+            "point": [990, 298]
+          }
+        ]
+      },
+      {
+        "id": 122,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1072, 298],
+          [1072, 407]
+        ],
+        "connected_to": [
+          {
+            "id": 121,
+            "point": [1072, 298]
+          },
+          {
+            "id": 123,
+            "point": [1072, 407]
+          }
+        ]
+      },
+      {
+        "id": 123,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1072, 407],
+          [990, 407]
+        ],
+        "connected_to": [
+          {
+            "id": 122,
+            "point": [1072, 407]
+          },
+          {
+            "id": 124,
+            "point": [990, 407]
+          }
+        ]
+      },
+      {
+        "id": 124,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [990, 407],
+          [990, 298]
+        ],
+        "connected_to": [
+          {
+            "id": 121,
+            "point": [990, 298]
+          },
+          {
+            "id": 123,
+            "point": [990, 407]
+          }
+        ]
+      },
+      {
+        "id": 125,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [404, 617],
+          [455, 617]
+        ],
+        "connected_to": [
+          {
+            "id": 126,
+            "point": [455, 617]
+          },
+          {
+            "id": 128,
+            "point": [404, 617]
+          }
+        ]
+      },
+      {
+        "id": 126,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [455, 617],
+          [455, 662]
+        ],
+        "connected_to": [
+          {
+            "id": 125,
+            "point": [455, 617]
+          },
+          {
+            "id": 127,
+            "point": [455, 662]
+          }
+        ]
+      },
+      {
+        "id": 127,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [455, 662],
+          [404, 662]
+        ],
+        "connected_to": [
+          {
+            "id": 126,
+            "point": [455, 662]
+          },
+          {
+            "id": 128,
+            "point": [404, 662]
+          }
+        ]
+      },
+      {
+        "id": 128,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [404, 662],
+          [404, 617]
+        ],
+        "connected_to": [
+          {
+            "id": 125,
+            "point": [404, 617]
+          },
+          {
+            "id": 127,
+            "point": [404, 662]
+          }
+        ]
+      },
+      {
+        "id": 129,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [668, 28],
+          [745, 28]
+        ],
+        "connected_to": [
+          {
+            "id": 130,
+            "point": [745, 28]
+          },
+          {
+            "id": 132,
+            "point": [668, 28]
+          }
+        ]
+      },
+      {
+        "id": 130,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [745, 28],
+          [745, 92]
+        ],
+        "connected_to": [
+          {
+            "id": 77,
+            "point": [745, 93]
+          },
+          {
+            "id": 78,
+            "point": [745, 93]
+          },
+          {
+            "id": 129,
+            "point": [745, 28]
+          }
+        ]
+      },
+      {
+        "id": 132,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [668, 92],
+          [668, 28]
+        ],
+        "connected_to": [
+          {
+            "id": 77,
+            "point": [668, 93]
+          },
+          {
+            "id": 80,
+            "point": [668, 93]
+          },
+          {
+            "id": 129,
+            "point": [668, 28]
+          }
+        ]
+      },
+      {
+        "id": 133,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [582, 301],
+          [636, 301]
+        ],
+        "connected_to": [
+          {
+            "id": 136,
+            "point": [582, 301]
+          },
+          {
+            "id": 161,
+            "point": [636, 301]
+          },
+          {
+            "id": 164,
+            "point": [636, 301]
+          }
+        ]
+      },
+      {
+        "id": 135,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [636, 400],
+          [582, 398]
+        ],
+        "connected_to": [
+          {
+            "id": 136,
+            "point": [582, 398]
+          },
+          {
+            "id": 163,
+            "point": [636, 400]
+          },
+          {
+            "id": 164,
+            "point": [636, 400]
+          }
+        ]
+      },
+      {
+        "id": 136,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [582, 398],
+          [582, 301]
+        ],
+        "connected_to": [
+          {
+            "id": 133,
+            "point": [582, 301]
+          },
+          {
+            "id": 135,
+            "point": [582, 398]
+          }
+        ]
+      },
+      {
+        "id": 137,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1132, 530],
+          [1239, 529]
+        ],
+        "connected_to": [
+          {
+            "id": 138,
+            "point": [1239, 529]
+          },
+          {
+            "id": 140,
+            "point": [1132, 530]
+          }
+        ]
+      },
+      {
+        "id": 138,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1239, 529],
+          [1239, 595]
+        ],
+        "connected_to": [
+          {
+            "id": 137,
+            "point": [1239, 529]
+          },
+          {
+            "id": 139,
+            "point": [1239, 595]
+          }
+        ]
+      },
+      {
+        "id": 139,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1239, 595],
+          [1132, 595]
+        ],
+        "connected_to": [
+          {
+            "id": 138,
+            "point": [1239, 595]
+          },
+          {
+            "id": 140,
+            "point": [1132, 595]
+          }
+        ]
+      },
+      {
+        "id": 140,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1132, 595],
+          [1132, 530]
+        ],
+        "connected_to": [
+          {
+            "id": 137,
+            "point": [1132, 530]
+          },
+          {
+            "id": 139,
+            "point": [1132, 595]
+          }
+        ]
+      },
+      {
+        "id": 142,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1238, 311],
+          [1239, 405]
+        ],
+        "connected_to": [
+          {
+            "id": 143,
+            "point": [1239, 405]
+          },
+          {
+            "id": 345,
+            "point": [1238, 311]
+          },
+          {
+            "id": 379,
+            "point": [1238, 311]
+          }
+        ]
+      },
+      {
+        "id": 143,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1239, 405],
+          [1131, 405]
+        ],
+        "connected_to": [
+          {
+            "id": 142,
+            "point": [1239, 405]
+          },
+          {
+            "id": 144,
+            "point": [1131, 405]
+          }
+        ]
+      },
+      {
+        "id": 144,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1131, 405],
+          [1132, 311]
+        ],
+        "connected_to": [
+          {
+            "id": 44,
+            "point": [1132, 311]
+          },
+          {
+            "id": 143,
+            "point": [1131, 405]
+          },
+          {
+            "id": 345,
+            "point": [1132, 311]
+          }
+        ]
+      },
+      {
+        "id": 149,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [404, 454],
+          [455, 454]
+        ],
+        "connected_to": [
+          {
+            "id": 150,
+            "point": [455, 454]
+          },
+          {
+            "id": 152,
+            "point": [404, 454]
+          }
+        ]
+      },
+      {
+        "id": 150,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [455, 454],
+          [455, 498]
+        ],
+        "connected_to": [
+          {
+            "id": 149,
+            "point": [455, 454]
+          },
+          {
+            "id": 151,
+            "point": [455, 498]
+          }
+        ]
+      },
+      {
+        "id": 151,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [455, 498],
+          [404, 498]
+        ],
+        "connected_to": [
+          {
+            "id": 150,
+            "point": [455, 498]
+          },
+          {
+            "id": 152,
+            "point": [404, 498]
+          }
+        ]
+      },
+      {
+        "id": 152,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [404, 498],
+          [404, 454]
+        ],
+        "connected_to": [
+          {
+            "id": 149,
+            "point": [404, 454]
+          },
+          {
+            "id": 151,
+            "point": [404, 498]
+          }
+        ]
+      },
+      {
+        "id": 154,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [745, 159],
+          [745, 224]
+        ],
+        "connected_to": [
+          {
+            "id": 78,
+            "point": [745, 158]
+          },
+          {
+            "id": 79,
+            "point": [745, 158]
+          },
+          {
+            "id": 155,
+            "point": [745, 224]
+          }
+        ]
+      },
+      {
+        "id": 155,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [745, 224],
+          [668, 224]
+        ],
+        "connected_to": [
+          {
+            "id": 154,
+            "point": [745, 224]
+          },
+          {
+            "id": 156,
+            "point": [668, 224]
+          }
+        ]
+      },
+      {
+        "id": 156,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [668, 224],
+          [668, 159]
+        ],
+        "connected_to": [
+          {
+            "id": 79,
+            "point": [668, 158]
+          },
+          {
+            "id": 80,
+            "point": [668, 158]
+          },
+          {
+            "id": 155,
+            "point": [668, 224]
+          }
+        ]
+      },
+      {
+        "id": 157,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1004, 1],
+          [1079, 1]
+        ],
+        "connected_to": [
+          {
+            "id": 158,
+            "point": [1079, 1]
+          },
+          {
+            "id": 385,
+            "point": [1004, 1]
+          }
+        ]
+      },
+      {
+        "id": 158,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1079, 1],
+          [1082, 65]
+        ],
+        "connected_to": [
+          {
+            "id": 70,
+            "point": [1082, 65]
+          },
+          {
+            "id": 157,
+            "point": [1079, 1]
+          },
+          {
+            "id": 349,
+            "point": [1082, 65]
+          }
+        ]
+      },
+      {
+        "id": 161,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [636, 301],
+          [716, 301]
+        ],
+        "connected_to": [
+          {
+            "id": 133,
+            "point": [636, 301]
+          },
+          {
+            "id": 162,
+            "point": [716, 301]
+          },
+          {
+            "id": 164,
+            "point": [636, 301]
+          }
+        ]
+      },
+      {
+        "id": 162,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [716, 301],
+          [716, 401]
+        ],
+        "connected_to": [
+          {
+            "id": 161,
+            "point": [716, 301]
+          },
+          {
+            "id": 163,
+            "point": [716, 401]
+          }
+        ]
+      },
+      {
+        "id": 163,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [716, 401],
+          [636, 400]
+        ],
+        "connected_to": [
+          {
+            "id": 135,
+            "point": [636, 400]
+          },
+          {
+            "id": 162,
+            "point": [716, 401]
+          },
+          {
+            "id": 164,
+            "point": [636, 400]
+          }
+        ]
+      },
+      {
+        "id": 164,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [636, 400],
+          [636, 301]
+        ],
+        "connected_to": [
+          {
+            "id": 133,
+            "point": [636, 301]
+          },
+          {
+            "id": 135,
+            "point": [636, 400]
+          },
+          {
+            "id": 161,
+            "point": [636, 301]
+          },
+          {
+            "id": 163,
+            "point": [636, 400]
+          }
+        ]
+      },
+      {
+        "id": 169,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [964, 675],
+          [1032, 675]
+        ],
+        "connected_to": [
+          {
+            "id": 170,
+            "point": [1032, 675]
+          },
+          {
+            "id": 172,
+            "point": [964, 675]
+          },
+          {
+            "id": 263,
+            "point": [966, 675]
+          }
+        ]
+      },
+      {
+        "id": 170,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1032, 675],
+          [1032, 708]
+        ],
+        "connected_to": [
+          {
+            "id": 169,
+            "point": [1032, 675]
+          },
+          {
+            "id": 361,
+            "point": [1032, 708]
+          }
+        ]
+      },
+      {
+        "id": 172,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [963, 709],
+          [964, 675]
+        ],
+        "connected_to": [
+          {
+            "id": 169,
+            "point": [964, 675]
+          },
+          {
+            "id": 192,
+            "point": [963, 709]
+          },
+          {
+            "id": 263,
+            "point": [966, 675]
+          },
+          {
+            "id": 360,
+            "point": [963, 709]
+          }
+        ]
+      },
+      {
+        "id": 174,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [414, 354],
+          [414, 408]
+        ],
+        "connected_to": [
+          {
+            "id": 82,
+            "point": [414, 353]
+          },
+          {
+            "id": 83,
+            "point": [414, 353]
+          },
+          {
+            "id": 175,
+            "point": [414, 408]
+          }
+        ]
+      },
+      {
+        "id": 175,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [414, 408],
+          [354, 408]
+        ],
+        "connected_to": [
+          {
+            "id": 99,
+            "point": [355, 408]
+          },
+          {
+            "id": 174,
+            "point": [414, 408]
+          },
+          {
+            "id": 176,
+            "point": [355, 408]
+          }
+        ]
+      },
+      {
+        "id": 176,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [355, 408],
+          [353, 354]
+        ],
+        "connected_to": [
+          {
+            "id": 58,
+            "point": [353, 354]
+          },
+          {
+            "id": 83,
+            "point": [353, 354]
+          },
+          {
+            "id": 99,
+            "point": [355, 408]
+          },
+          {
+            "id": 175,
+            "point": [354, 408]
+          },
+          {
+            "id": 354,
+            "point": [353, 354]
+          }
+        ]
+      },
+      {
+        "id": 181,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [973, 604],
+          [1057, 603]
+        ],
+        "connected_to": [
+          {
+            "id": 89,
+            "point": [1057, 604]
+          },
+          {
+            "id": 184,
+            "point": [973, 604]
+          },
+          {
+            "id": 382,
+            "point": [1057, 603]
+          }
+        ]
+      },
+      {
+        "id": 183,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1057, 637],
+          [971, 636]
+        ],
+        "connected_to": [
+          {
+            "id": 184,
+            "point": [971, 636]
+          },
+          {
+            "id": 263,
+            "point": [971, 636]
+          },
+          {
+            "id": 355,
+            "point": [1057, 637]
+          },
+          {
+            "id": 357,
+            "point": [1057, 637]
+          },
+          {
+            "id": 357,
+            "point": [971, 636]
+          },
+          {
+            "id": 382,
+            "point": [1057, 637]
+          }
+        ]
+      },
+      {
+        "id": 184,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [971, 636],
+          [973, 604]
+        ],
+        "connected_to": [
+          {
+            "id": 181,
+            "point": [973, 604]
+          },
+          {
+            "id": 183,
+            "point": [971, 636]
+          },
+          {
+            "id": 263,
+            "point": [971, 636]
+          },
+          {
+            "id": 357,
+            "point": [971, 636]
+          }
+        ]
+      },
+      {
+        "id": 192,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [963, 772],
+          [963, 709]
+        ],
+        "connected_to": [
+          {
+            "id": 112,
+            "point": [963, 772]
+          },
+          {
+            "id": 172,
+            "point": [963, 709]
+          },
+          {
+            "id": 358,
+            "point": [963, 772]
+          },
+          {
+            "id": 360,
+            "point": [963, 709]
+          }
+        ]
+      },
+      {
+        "id": 195,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [126, 251],
+          [79, 250]
+        ],
+        "connected_to": [
+          {
+            "id": 2,
+            "point": [79, 250]
+          },
+          {
+            "id": 3,
+            "point": [79, 250]
+          },
+          {
+            "id": 372,
+            "point": [126, 251]
+          }
+        ]
+      },
+      {
+        "id": 197,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [602, 442],
+          [741, 442]
+        ],
+        "connected_to": [
+          {
+            "id": 198,
+            "point": [741, 442]
+          },
+          {
+            "id": 200,
+            "point": [602, 442]
+          }
+        ]
+      },
+      {
+        "id": 198,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [741, 442],
+          [741, 680]
+        ],
+        "connected_to": [
+          {
+            "id": 197,
+            "point": [741, 442]
+          },
+          {
+            "id": 324,
+            "point": [741, 680]
+          },
+          {
+            "id": 326,
+            "point": [741, 680]
+          }
+        ]
+      },
+      {
+        "id": 200,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [602, 680],
+          [602, 442]
+        ],
+        "connected_to": [
+          {
+            "id": 197,
+            "point": [602, 442]
+          },
+          {
+            "id": 324,
+            "point": [602, 680]
+          },
+          {
+            "id": 325,
+            "point": [602, 680]
+          }
+        ]
+      },
+      {
+        "id": 201,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [973, 43],
+          [1004, 43]
+        ],
+        "connected_to": [
+          {
+            "id": 204,
+            "point": [973, 43]
+          },
+          {
+            "id": 384,
+            "point": [1004, 43]
+          },
+          {
+            "id": 385,
+            "point": [1004, 43]
+          }
+        ]
+      },
+      {
+        "id": 204,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [972, 107],
+          [973, 43]
+        ],
+        "connected_to": [
+          {
+            "id": 68,
+            "point": [972, 107]
+          },
+          {
+            "id": 201,
+            "point": [973, 43]
+          },
+          {
+            "id": 346,
+            "point": [972, 107]
+          }
+        ]
+      },
+      {
+        "id": 205,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1030, 69],
+          [1056, 65]
+        ],
+        "connected_to": [
+          {
+            "id": 349,
+            "point": [1056, 66]
+          },
+          {
+            "id": 381,
+            "point": [1056, 65]
+          },
+          {
+            "id": 387,
+            "point": [1030, 69]
+          }
+        ]
+      },
+      {
+        "id": 217,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [78, 449],
+          [130, 455]
+        ],
+        "connected_to": [
+          {
+            "id": 6,
+            "point": [78, 449]
+          },
+          {
+            "id": 321,
+            "point": [78, 449]
+          },
+          {
+            "id": 323,
+            "point": [78, 449]
+          },
+          {
+            "id": 342,
+            "point": [130, 455]
+          },
+          {
+            "id": 344,
+            "point": [130, 455]
+          }
+        ]
+      },
+      {
+        "id": 223,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1030, 106],
+          [1002, 104]
+        ],
+        "connected_to": [
+          {
+            "id": 335,
+            "point": [1030, 104]
+          },
+          {
+            "id": 336,
+            "point": [1030, 106]
+          },
+          {
+            "id": 336,
+            "point": [1002, 104]
+          },
+          {
+            "id": 346,
+            "point": [1002, 104]
+          },
+          {
+            "id": 386,
+            "point": [1002, 104]
+          },
+          {
+            "id": 387,
+            "point": [1030, 106]
+          }
+        ]
+      },
+      {
+        "id": 261,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1077, 708],
+          [1080, 637]
+        ],
+        "connected_to": [
+          {
+            "id": 90,
+            "point": [1080, 637]
+          },
+          {
+            "id": 266,
+            "point": [1077, 708]
+          },
+          {
+            "id": 355,
+            "point": [1080, 637]
+          }
+        ]
+      },
+      {
+        "id": 263,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [971, 636],
+          [966, 675]
+        ],
+        "connected_to": [
+          {
+            "id": 169,
+            "point": [964, 675]
+          },
+          {
+            "id": 172,
+            "point": [964, 675]
+          },
+          {
+            "id": 183,
+            "point": [971, 636]
+          },
+          {
+            "id": 184,
+            "point": [971, 636]
+          },
+          {
+            "id": 357,
+            "point": [971, 636]
+          }
+        ]
+      },
+      {
+        "id": 266,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1029, 708],
+          [1077, 708]
+        ],
+        "connected_to": [
+          {
+            "id": 261,
+            "point": [1077, 708]
+          },
+          {
+            "id": 360,
+            "point": [1029, 708]
+          }
+        ]
+      },
+      {
+        "id": 296,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1026, 709],
+          [1026, 768]
+        ],
+        "connected_to": [
+          {
+            "id": 358,
+            "point": [1026, 768]
+          },
+          {
+            "id": 359,
+            "point": [1026, 768]
+          },
+          {
+            "id": 361,
+            "point": [1026, 709]
+          }
+        ]
+      },
+      {
+        "id": 321,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [34, 447],
+          [78, 449]
+        ],
+        "connected_to": [
+          {
+            "id": 6,
+            "point": [78, 449]
+          },
+          {
+            "id": 217,
+            "point": [78, 449]
+          },
+          {
+            "id": 322,
+            "point": [34, 447]
+          },
+          {
+            "id": 323,
+            "point": [78, 449]
+          }
+        ]
+      },
+      {
+        "id": 322,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [18, 451],
+          [34, 447]
+        ],
+        "connected_to": [
+          {
+            "id": 4,
+            "point": [18, 451]
+          },
+          {
+            "id": 321,
+            "point": [34, 447]
+          }
+        ]
+      },
+      {
+        "id": 323,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [78, 449],
+          [97, 450]
+        ],
+        "connected_to": [
+          {
+            "id": 6,
+            "point": [78, 449]
+          },
+          {
+            "id": 116,
+            "point": [97, 450]
+          },
+          {
+            "id": 217,
+            "point": [78, 449]
+          },
+          {
+            "id": 321,
+            "point": [78, 449]
+          },
+          {
+            "id": 344,
+            "point": [97, 450]
+          },
+          {
+            "id": 370,
+            "point": [97, 450]
+          }
+        ]
+      },
+      {
+        "id": 324,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [602, 680],
+          [741, 680]
+        ],
+        "connected_to": [
+          {
+            "id": 198,
+            "point": [741, 680]
+          },
+          {
+            "id": 200,
+            "point": [602, 680]
+          },
+          {
+            "id": 325,
+            "point": [602, 680]
+          },
+          {
+            "id": 326,
+            "point": [741, 680]
+          }
+        ]
+      },
+      {
+        "id": 325,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [78, 680],
+          [602, 680]
+        ],
+        "connected_to": [
+          {
+            "id": 6,
+            "point": [78, 680]
+          },
+          {
+            "id": 200,
+            "point": [602, 680]
+          },
+          {
+            "id": 324,
+            "point": [602, 680]
+          }
+        ]
+      },
+      {
+        "id": 326,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [741, 680],
+          [952, 680]
+        ],
+        "connected_to": [
+          {
+            "id": 8,
+            "point": [952, 680]
+          },
+          {
+            "id": 198,
+            "point": [741, 680]
+          },
+          {
+            "id": 324,
+            "point": [741, 680]
+          }
+        ]
+      },
+      {
+        "id": 327,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [133, 260],
+          [184, 260]
+        ],
+        "connected_to": [
+          {
+            "id": 14,
+            "point": [184, 260]
+          },
+          {
+            "id": 64,
+            "point": [133, 260]
+          },
+          {
+            "id": 328,
+            "point": [133, 260]
+          },
+          {
+            "id": 329,
+            "point": [184, 260]
+          }
+        ]
+      },
+      {
+        "id": 328,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [98, 262],
+          [133, 260]
+        ],
+        "connected_to": [
+          {
+            "id": 64,
+            "point": [133, 260]
+          },
+          {
+            "id": 327,
+            "point": [133, 260]
+          },
+          {
+            "id": 368,
+            "point": [100, 262]
+          }
+        ]
+      },
+      {
+        "id": 329,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [184, 260],
+          [211, 256]
+        ],
+        "connected_to": [
+          {
+            "id": 14,
+            "point": [184, 260]
+          },
+          {
+            "id": 62,
+            "point": [211, 256]
+          },
+          {
+            "id": 327,
+            "point": [184, 260]
+          }
+        ]
+      },
+      {
+        "id": 330,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [104, 333],
+          [185, 333]
+        ],
+        "connected_to": [
+          {
+            "id": 14,
+            "point": [184, 333]
+          },
+          {
+            "id": 30,
+            "point": [185, 333]
+          },
+          {
+            "id": 32,
+            "point": [104, 333]
+          }
+        ]
+      },
+      {
+        "id": 332,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1030, 177],
+          [1057, 176]
+        ],
+        "connected_to": [
+          {
+            "id": 334,
+            "point": [1030, 177]
+          },
+          {
+            "id": 341,
+            "point": [1030, 177]
+          },
+          {
+            "id": 373,
+            "point": [1030, 177]
+          },
+          {
+            "id": 374,
+            "point": [1057, 176]
+          }
+        ]
+      },
+      {
+        "id": 334,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1000, 176],
+          [1030, 177]
+        ],
+        "connected_to": [
+          {
+            "id": 332,
+            "point": [1030, 177]
+          },
+          {
+            "id": 340,
+            "point": [1000, 176]
+          },
+          {
+            "id": 341,
+            "point": [1000, 176]
+          },
+          {
+            "id": 341,
+            "point": [1030, 177]
+          },
+          {
+            "id": 373,
+            "point": [1030, 177]
+          }
+        ]
+      },
+      {
+        "id": 335,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1030, 104],
+          [1059, 106]
+        ],
+        "connected_to": [
+          {
+            "id": 71,
+            "point": [1058, 105]
+          },
+          {
+            "id": 223,
+            "point": [1030, 106]
+          },
+          {
+            "id": 336,
+            "point": [1030, 106]
+          },
+          {
+            "id": 374,
+            "point": [1059, 106]
+          },
+          {
+            "id": 381,
+            "point": [1058, 106]
+          },
+          {
+            "id": 387,
+            "point": [1030, 106]
+          }
+        ]
+      },
+      {
+        "id": 336,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1002, 104],
+          [1030, 106]
+        ],
+        "connected_to": [
+          {
+            "id": 223,
+            "point": [1030, 106]
+          },
+          {
+            "id": 223,
+            "point": [1002, 104]
+          },
+          {
+            "id": 335,
+            "point": [1030, 104]
+          },
+          {
+            "id": 346,
+            "point": [1002, 104]
+          },
+          {
+            "id": 386,
+            "point": [1002, 104]
+          },
+          {
+            "id": 387,
+            "point": [1030, 106]
+          }
+        ]
+      },
+      {
+        "id": 338,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [102, 404],
+          [186, 404]
+        ],
+        "connected_to": [
+          {
+            "id": 30,
+            "point": [186, 404]
+          },
+          {
+            "id": 32,
+            "point": [103, 404]
+          },
+          {
+            "id": 114,
+            "point": [186, 404]
+          },
+          {
+            "id": 116,
+            "point": [102, 404]
+          }
+        ]
+      },
+      {
+        "id": 340,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [972, 176],
+          [1000, 176]
+        ],
+        "connected_to": [
+          {
+            "id": 36,
+            "point": [972, 176]
+          },
+          {
+            "id": 68,
+            "point": [972, 174]
+          },
+          {
+            "id": 334,
+            "point": [1000, 176]
+          },
+          {
+            "id": 341,
+            "point": [1000, 176]
+          }
+        ]
+      },
+      {
+        "id": 341,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1000, 176],
+          [1030, 177]
+        ],
+        "connected_to": [
+          {
+            "id": 332,
+            "point": [1030, 177]
+          },
+          {
+            "id": 334,
+            "point": [1000, 176]
+          },
+          {
+            "id": 334,
+            "point": [1030, 177]
+          },
+          {
+            "id": 340,
+            "point": [1000, 176]
+          },
+          {
+            "id": 373,
+            "point": [1030, 177]
+          }
+        ]
+      },
+      {
+        "id": 342,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [130, 455],
+          [187, 455]
+        ],
+        "connected_to": [
+          {
+            "id": 114,
+            "point": [187, 455]
+          },
+          {
+            "id": 217,
+            "point": [130, 455]
+          },
+          {
+            "id": 344,
+            "point": [130, 455]
+          }
+        ]
+      },
+      {
+        "id": 344,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [97, 450],
+          [130, 455]
+        ],
+        "connected_to": [
+          {
+            "id": 116,
+            "point": [97, 450]
+          },
+          {
+            "id": 217,
+            "point": [130, 455]
+          },
+          {
+            "id": 323,
+            "point": [97, 450]
+          },
+          {
+            "id": 342,
+            "point": [130, 455]
+          },
+          {
+            "id": 370,
+            "point": [97, 450]
+          }
+        ]
+      },
+      {
+        "id": 345,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1132, 311],
+          [1238, 311]
+        ],
+        "connected_to": [
+          {
+            "id": 44,
+            "point": [1132, 311]
+          },
+          {
+            "id": 142,
+            "point": [1238, 311]
+          },
+          {
+            "id": 144,
+            "point": [1132, 311]
+          },
+          {
+            "id": 379,
+            "point": [1238, 311]
+          }
+        ]
+      },
+      {
+        "id": 346,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [972, 107],
+          [1002, 104]
+        ],
+        "connected_to": [
+          {
+            "id": 68,
+            "point": [972, 107]
+          },
+          {
+            "id": 204,
+            "point": [972, 107]
+          },
+          {
+            "id": 223,
+            "point": [1002, 104]
+          },
+          {
+            "id": 336,
+            "point": [1002, 104]
+          },
+          {
+            "id": 386,
+            "point": [1002, 104]
+          }
+        ]
+      },
+      {
+        "id": 349,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1056, 66],
+          [1082, 65]
+        ],
+        "connected_to": [
+          {
+            "id": 70,
+            "point": [1082, 65]
+          },
+          {
+            "id": 158,
+            "point": [1082, 65]
+          },
+          {
+            "id": 205,
+            "point": [1056, 65]
+          },
+          {
+            "id": 381,
+            "point": [1056, 65]
+          }
+        ]
+      },
+      {
+        "id": 352,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [257, 355],
+          [287, 354]
+        ],
+        "connected_to": [
+          {
+            "id": 100,
+            "point": [257, 355]
+          },
+          {
+            "id": 353,
+            "point": [257, 355]
+          },
+          {
+            "id": 354,
+            "point": [287, 354]
+          },
+          {
+            "id": 380,
+            "point": [288, 354]
+          }
+        ]
+      },
+      {
+        "id": 353,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [226, 354],
+          [257, 355]
+        ],
+        "connected_to": [
+          {
+            "id": 76,
+            "point": [226, 354]
+          },
+          {
+            "id": 100,
+            "point": [257, 355]
+          },
+          {
+            "id": 352,
+            "point": [257, 355]
+          }
+        ]
+      },
+      {
+        "id": 354,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [287, 354],
+          [353, 354]
+        ],
+        "connected_to": [
+          {
+            "id": 58,
+            "point": [353, 354]
+          },
+          {
+            "id": 83,
+            "point": [353, 354]
+          },
+          {
+            "id": 176,
+            "point": [353, 354]
+          },
+          {
+            "id": 352,
+            "point": [287, 354]
+          },
+          {
+            "id": 380,
+            "point": [288, 354]
+          }
+        ]
+      },
+      {
+        "id": 355,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1057, 637],
+          [1080, 637]
+        ],
+        "connected_to": [
+          {
+            "id": 90,
+            "point": [1080, 637]
+          },
+          {
+            "id": 183,
+            "point": [1057, 637]
+          },
+          {
+            "id": 261,
+            "point": [1080, 637]
+          },
+          {
+            "id": 357,
+            "point": [1057, 637]
+          },
+          {
+            "id": 382,
+            "point": [1057, 637]
+          }
+        ]
+      },
+      {
+        "id": 357,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [971, 636],
+          [1057, 637]
+        ],
+        "connected_to": [
+          {
+            "id": 183,
+            "point": [1057, 637]
+          },
+          {
+            "id": 183,
+            "point": [971, 636]
+          },
+          {
+            "id": 184,
+            "point": [971, 636]
+          },
+          {
+            "id": 263,
+            "point": [971, 636]
+          },
+          {
+            "id": 355,
+            "point": [1057, 637]
+          },
+          {
+            "id": 382,
+            "point": [1057, 637]
+          }
+        ]
+      },
+      {
+        "id": 358,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [963, 772],
+          [1026, 768]
+        ],
+        "connected_to": [
+          {
+            "id": 112,
+            "point": [963, 772]
+          },
+          {
+            "id": 192,
+            "point": [963, 772]
+          },
+          {
+            "id": 296,
+            "point": [1026, 768]
+          },
+          {
+            "id": 359,
+            "point": [1026, 768]
+          }
+        ]
+      },
+      {
+        "id": 359,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1026, 768],
+          [1136, 772]
+        ],
+        "connected_to": [
+          {
+            "id": 296,
+            "point": [1026, 768]
+          },
+          {
+            "id": 358,
+            "point": [1026, 768]
+          },
+          {
+            "id": 362,
+            "point": [1136, 772]
+          },
+          {
+            "id": 363,
+            "point": [1136, 772]
+          }
+        ]
+      },
+      {
+        "id": 360,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [963, 709],
+          [1029, 708]
+        ],
+        "connected_to": [
+          {
+            "id": 172,
+            "point": [963, 709]
+          },
+          {
+            "id": 192,
+            "point": [963, 709]
+          },
+          {
+            "id": 266,
+            "point": [1029, 708]
+          }
+        ]
+      },
+      {
+        "id": 361,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1026, 709],
+          [1032, 708]
+        ],
+        "connected_to": [
+          {
+            "id": 170,
+            "point": [1032, 708]
+          },
+          {
+            "id": 296,
+            "point": [1026, 709]
+          }
+        ]
+      },
+      {
+        "id": 362,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [1136, 772],
+          [1136, 827]
+        ],
+        "connected_to": [
+          {
+            "id": 111,
+            "point": [1136, 827]
+          },
+          {
+            "id": 359,
+            "point": [1136, 772]
+          },
+          {
+            "id": 363,
+            "point": [1136, 772]
+          },
+          {
+            "id": 364,
+            "point": [1136, 827]
+          }
+        ]
+      },
+      {
+        "id": 363,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [1136, 682],
+          [1136, 772]
+        ],
+        "connected_to": [
+          {
+            "id": 11,
+            "point": [1136, 682]
+          },
+          {
+            "id": 359,
+            "point": [1136, 772]
+          },
+          {
+            "id": 362,
+            "point": [1136, 772]
+          }
+        ]
+      },
+      {
+        "id": 364,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [1136, 827],
+          [1136, 839]
+        ],
+        "connected_to": [
+          {
+            "id": 9,
+            "point": [1136, 839]
+          },
+          {
+            "id": 111,
+            "point": [1136, 827]
+          },
+          {
+            "id": 362,
+            "point": [1136, 827]
+          }
+        ]
+      },
+      {
+        "id": 365,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [1238, 156],
+          [1238, 258]
+        ],
+        "connected_to": [
+          {
+            "id": 41,
+            "point": [1238, 156]
+          },
+          {
+            "id": 366,
+            "point": [1238, 156]
+          },
+          {
+            "id": 367,
+            "point": [1238, 258]
+          },
+          {
+            "id": 379,
+            "point": [1238, 258]
+          }
+        ]
+      },
+      {
+        "id": 366,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [1250, 12],
+          [1238, 156]
+        ],
+        "connected_to": [
+          {
+            "id": 1,
+            "point": [1250, 12]
+          },
+          {
+            "id": 41,
+            "point": [1238, 156]
+          },
+          {
+            "id": 365,
+            "point": [1238, 156]
+          }
+        ]
+      },
+      {
+        "id": 367,
+        "type": "segment",
+        "class": "Wall External",
+        "points": [
+          [1238, 258],
+          [1250, 682]
+        ],
+        "connected_to": [
+          {
+            "id": 11,
+            "point": [1250, 682]
+          },
+          {
+            "id": 365,
+            "point": [1238, 258]
+          },
+          {
+            "id": 379,
+            "point": [1238, 258]
+          }
+        ]
+      },
+      {
+        "id": 368,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [100, 262],
+          [95, 328]
+        ],
+        "connected_to": [
+          {
+            "id": 328,
+            "point": [98, 262]
+          },
+          {
+            "id": 370,
+            "point": [95, 328]
+          }
+        ]
+      },
+      {
+        "id": 370,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [95, 328],
+          [97, 450]
+        ],
+        "connected_to": [
+          {
+            "id": 116,
+            "point": [97, 450]
+          },
+          {
+            "id": 323,
+            "point": [97, 450]
+          },
+          {
+            "id": 344,
+            "point": [97, 450]
+          },
+          {
+            "id": 368,
+            "point": [95, 328]
+          }
+        ]
+      },
+      {
+        "id": 371,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [126, 27],
+          [128, 114]
+        ],
+        "connected_to": [
+          {
+            "id": 17,
+            "point": [126, 27]
+          },
+          {
+            "id": 19,
+            "point": [128, 114]
+          },
+          {
+            "id": 48,
+            "point": [128, 114]
+          },
+          {
+            "id": 372,
+            "point": [128, 114]
+          }
+        ]
+      },
+      {
+        "id": 372,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [128, 114],
+          [126, 251]
+        ],
+        "connected_to": [
+          {
+            "id": 19,
+            "point": [128, 114]
+          },
+          {
+            "id": 48,
+            "point": [128, 114]
+          },
+          {
+            "id": 195,
+            "point": [126, 251]
+          },
+          {
+            "id": 371,
+            "point": [128, 114]
+          }
+        ]
+      },
+      {
+        "id": 373,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1030, 177],
+          [1030, 261]
+        ],
+        "connected_to": [
+          {
+            "id": 35,
+            "point": [1030, 261]
+          },
+          {
+            "id": 332,
+            "point": [1030, 177]
+          },
+          {
+            "id": 334,
+            "point": [1030, 177]
+          },
+          {
+            "id": 341,
+            "point": [1030, 177]
+          }
+        ]
+      },
+      {
+        "id": 374,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1059, 106],
+          [1057, 176]
+        ],
+        "connected_to": [
+          {
+            "id": 71,
+            "point": [1058, 105]
+          },
+          {
+            "id": 332,
+            "point": [1057, 176]
+          },
+          {
+            "id": 335,
+            "point": [1059, 106]
+          },
+          {
+            "id": 381,
+            "point": [1058, 106]
+          }
+        ]
+      },
+      {
+        "id": 379,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1238, 258],
+          [1238, 311]
+        ],
+        "connected_to": [
+          {
+            "id": 142,
+            "point": [1238, 311]
+          },
+          {
+            "id": 345,
+            "point": [1238, 311]
+          },
+          {
+            "id": 365,
+            "point": [1238, 258]
+          },
+          {
+            "id": 367,
+            "point": [1238, 258]
+          }
+        ]
+      },
+      {
+        "id": 380,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [290, 299],
+          [288, 354]
+        ],
+        "connected_to": [
+          {
+            "id": 57,
+            "point": [290, 299]
+          },
+          {
+            "id": 73,
+            "point": [290, 299]
+          },
+          {
+            "id": 352,
+            "point": [287, 354]
+          },
+          {
+            "id": 354,
+            "point": [287, 354]
+          }
+        ]
+      },
+      {
+        "id": 381,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1056, 65],
+          [1058, 106]
+        ],
+        "connected_to": [
+          {
+            "id": 71,
+            "point": [1058, 105]
+          },
+          {
+            "id": 205,
+            "point": [1056, 65]
+          },
+          {
+            "id": 335,
+            "point": [1059, 106]
+          },
+          {
+            "id": 349,
+            "point": [1056, 66]
+          },
+          {
+            "id": 374,
+            "point": [1059, 106]
+          }
+        ]
+      },
+      {
+        "id": 382,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1057, 603],
+          [1057, 637]
+        ],
+        "connected_to": [
+          {
+            "id": 89,
+            "point": [1057, 604]
+          },
+          {
+            "id": 181,
+            "point": [1057, 603]
+          },
+          {
+            "id": 183,
+            "point": [1057, 637]
+          },
+          {
+            "id": 355,
+            "point": [1057, 637]
+          },
+          {
+            "id": 357,
+            "point": [1057, 637]
+          }
+        ]
+      },
+      {
+        "id": 384,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1004, 43],
+          [1004, 64]
+        ],
+        "connected_to": [
+          {
+            "id": 201,
+            "point": [1004, 43]
+          },
+          {
+            "id": 385,
+            "point": [1004, 43]
+          },
+          {
+            "id": 386,
+            "point": [1004, 64]
+          }
+        ]
+      },
+      {
+        "id": 385,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1004, 1],
+          [1004, 43]
+        ],
+        "connected_to": [
+          {
+            "id": 157,
+            "point": [1004, 1]
+          },
+          {
+            "id": 201,
+            "point": [1004, 43]
+          },
+          {
+            "id": 384,
+            "point": [1004, 43]
+          }
+        ]
+      },
+      {
+        "id": 386,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1004, 64],
+          [1002, 104]
+        ],
+        "connected_to": [
+          {
+            "id": 223,
+            "point": [1002, 104]
+          },
+          {
+            "id": 336,
+            "point": [1002, 104]
+          },
+          {
+            "id": 346,
+            "point": [1002, 104]
+          },
+          {
+            "id": 384,
+            "point": [1004, 64]
+          }
+        ]
+      },
+      {
+        "id": 387,
+        "type": "segment",
+        "class": "Wall Internal",
+        "points": [
+          [1030, 69],
+          [1030, 106]
+        ],
+        "connected_to": [
+          {
+            "id": 205,
+            "point": [1030, 69]
+          },
+          {
+            "id": 223,
+            "point": [1030, 106]
+          },
+          {
+            "id": 335,
+            "point": [1030, 104]
+          },
+          {
+            "id": 336,
+            "point": [1030, 106]
+          }
+        ]
+      }
+    ],
+    "doors": [],
+    "rooms": [
+      {
+        "id": 1,
+        "class": "room",
+        "confidence": 0.9511,
+        "wall_ids": [14, 327, 328, 330],
+        "bbox": [104, 260, 184, 328],
+        "type": "detected"
+      },
+      {
+        "id": 2,
+        "class": "room",
+        "confidence": 0.9354,
+        "wall_ids": [17, 18, 19, 371],
+        "bbox": [132, 27, 211, 113],
+        "type": "detected"
+      },
+      {
+        "id": 3,
+        "class": "room",
+        "confidence": 0.9349,
+        "wall_ids": [332, 373],
+        "bbox": [1030, 177, 1084, 261],
+        "type": "detected"
+      },
+      {
+        "id": 4,
+        "class": "room",
+        "confidence": 0.9321,
+        "wall_ids": [223, 332, 334, 335, 336, 341, 374],
+        "bbox": [1001, 107, 1055, 172],
+        "type": "detected"
+      },
+      {
+        "id": 5,
+        "class": "room",
+        "confidence": 0.9233,
+        "wall_ids": [330],
+        "bbox": [104, 333, 186, 397],
+        "type": "detected"
+      },
+      {
+        "id": 6,
+        "class": "room",
+        "confidence": 0.9076,
+        "wall_ids": [35, 36, 334, 340, 341, 373],
+        "bbox": [972, 177, 1026, 261],
+        "type": "detected"
+      },
+      {
+        "id": 7,
+        "class": "room",
+        "confidence": 0.892,
+        "wall_ids": [342],
+        "bbox": [131, 455, 233, 680],
+        "type": "detected"
+      },
+      {
+        "id": 8,
+        "class": "room",
+        "confidence": 0.889,
+        "wall_ids": [41, 44, 345, 365, 379],
+        "bbox": [1132, 154, 1238, 307],
+        "type": "detected"
+      },
+      {
+        "id": 9,
+        "class": "room",
+        "confidence": 0.8803,
+        "wall_ids": [19, 46, 47, 48],
+        "bbox": [132, 116, 211, 180],
+        "type": "detected"
+      },
+      {
+        "id": 10,
+        "class": "room",
+        "confidence": 0.8737,
+        "wall_ids": [49, 50, 51, 52],
+        "bbox": [1048, 443, 1086, 497],
+        "type": "detected"
+      },
+      {
+        "id": 11,
+        "class": "room",
+        "confidence": 0.8722,
+        "wall_ids": [52, 53],
+        "bbox": [1009, 443, 1046, 497],
+        "type": "detected"
+      },
+      {
+        "id": 12,
+        "class": "room",
+        "confidence": 0.8691,
+        "wall_ids": [57, 58, 354, 380],
+        "bbox": [290, 299, 350, 352],
+        "type": "detected"
+      },
+      {
+        "id": 13,
+        "class": "room",
+        "confidence": 0.849,
+        "wall_ids": [47, 62],
+        "bbox": [133, 183, 211, 251],
+        "type": "detected"
+      },
+      {
+        "id": 14,
+        "class": "room",
+        "confidence": 0.8461,
+        "wall_ids": [68, 340, 346],
+        "bbox": [971, 107, 998, 172],
+        "type": "detected"
+      },
+      {
+        "id": 15,
+        "class": "room",
+        "confidence": 0.8401,
+        "wall_ids": [70, 71, 349, 381],
+        "bbox": [1056, 69, 1084, 104],
+        "type": "detected"
+      },
+      {
+        "id": 16,
+        "class": "room",
+        "confidence": 0.8376,
+        "wall_ids": [73, 76, 352, 353, 380],
+        "bbox": [226, 299, 286, 352],
+        "type": "detected"
+      },
+      {
+        "id": 17,
+        "class": "room",
+        "confidence": 0.8344,
+        "wall_ids": [77, 78, 79, 80],
+        "bbox": [668, 94, 745, 158],
+        "type": "detected"
+      },
+      {
+        "id": 18,
+        "class": "room",
+        "confidence": 0.822,
+        "wall_ids": [58, 81, 82, 83],
+        "bbox": [353, 299, 414, 352],
+        "type": "detected"
+      },
+      {
+        "id": 19,
+        "class": "room",
+        "confidence": 0.819,
+        "wall_ids": [41, 44, 70, 71, 345, 349, 365, 374, 379, 381],
+        "bbox": [1059, 14, 1237, 346],
+        "type": "detected"
+      },
+      {
+        "id": 20,
+        "class": "room",
+        "confidence": 0.8173,
+        "wall_ids": [89, 90, 355, 382],
+        "bbox": [1057, 602, 1084, 634],
+        "type": "detected"
+      },
+      {
+        "id": 21,
+        "class": "room",
+        "confidence": 0.817,
+        "wall_ids": [93, 96],
+        "bbox": [971, 444, 1007, 497],
+        "type": "detected"
+      },
+      {
+        "id": 22,
+        "class": "room",
+        "confidence": 0.8146,
+        "wall_ids": [99, 100, 176, 352, 354],
+        "bbox": [257, 355, 353, 407],
+        "type": "detected"
+      },
+      {
+        "id": 23,
+        "class": "room",
+        "confidence": 0.8063,
+        "wall_ids": [101, 102, 103, 104],
+        "bbox": [972, 499, 1047, 563],
+        "type": "detected"
+      },
+      {
+        "id": 24,
+        "class": "room",
+        "confidence": 0.8056,
+        "wall_ids": [321, 323, 368, 370],
+        "bbox": [34, 263, 95, 447],
+        "type": "detected"
+      },
+      {
+        "id": 25,
+        "class": "room",
+        "confidence": 0.7863,
+        "wall_ids": [112, 358],
+        "bbox": [963, 772, 1127, 827],
+        "type": "detected"
+      },
+      {
+        "id": 26,
+        "class": "room",
+        "confidence": 0.7552,
+        "wall_ids": [114, 116, 338, 342, 344],
+        "bbox": [99, 404, 187, 451],
+        "type": "detected"
+      },
+      {
+        "id": 27,
+        "class": "room",
+        "confidence": 0.7459,
+        "wall_ids": [51],
+        "bbox": [1050, 499, 1085, 536],
+        "type": "detected"
+      },
+      {
+        "id": 28,
+        "class": "room",
+        "confidence": 0.7385,
+        "wall_ids": [121, 122, 123, 124],
+        "bbox": [990, 298, 1072, 407],
+        "type": "detected"
+      },
+      {
+        "id": 29,
+        "class": "room",
+        "confidence": 0.7373,
+        "wall_ids": [125, 126, 127, 128],
+        "bbox": [404, 617, 455, 662],
+        "type": "detected"
+      },
+      {
+        "id": 30,
+        "class": "room",
+        "confidence": 0.7205,
+        "wall_ids": [77, 129, 130, 132],
+        "bbox": [668, 28, 745, 91],
+        "type": "detected"
+      },
+      {
+        "id": 31,
+        "class": "room",
+        "confidence": 0.6824,
+        "wall_ids": [133, 135, 136, 164],
+        "bbox": [582, 301, 635, 398],
+        "type": "detected"
+      },
+      {
+        "id": 32,
+        "class": "room",
+        "confidence": 0.6821,
+        "wall_ids": [137, 138, 139, 140],
+        "bbox": [1132, 530, 1239, 595],
+        "type": "detected"
+      },
+      {
+        "id": 33,
+        "class": "room",
+        "confidence": 0.6775,
+        "wall_ids": [142, 143, 144, 345],
+        "bbox": [1131, 311, 1239, 405],
+        "type": "detected"
+      },
+      {
+        "id": 34,
+        "class": "room",
+        "confidence": 0.671,
+        "wall_ids": [169, 170, 172, 183, 261, 263, 266, 355, 357, 360, 361],
+        "bbox": [969, 638, 1077, 708],
+        "type": "detected"
+      },
+      {
+        "id": 35,
+        "class": "room",
+        "confidence": 0.5801,
+        "wall_ids": [149, 150, 151, 152],
+        "bbox": [404, 454, 455, 498],
+        "type": "detected"
+      },
+      {
+        "id": 36,
+        "class": "room",
+        "confidence": 0.5116,
+        "wall_ids": [79, 154, 155, 156],
+        "bbox": [668, 160, 745, 224],
+        "type": "detected"
+      },
+      {
+        "id": 37,
+        "class": "room",
+        "confidence": 0.5096,
+        "wall_ids": [157, 158, 205, 349, 384, 385],
+        "bbox": [1004, 1, 1079, 64],
+        "type": "detected"
+      },
+      {
+        "id": 38,
+        "class": "room",
+        "confidence": 0.5047,
+        "wall_ids": [161, 162, 163, 164],
+        "bbox": [637, 301, 716, 401],
+        "type": "detected"
+      },
+      {
+        "id": 39,
+        "class": "room",
+        "confidence": 0.4984,
+        "wall_ids": [],
+        "bbox": [1170, 465, 1239, 527],
+        "type": "detected"
+      },
+      {
+        "id": 40,
+        "class": "room",
+        "confidence": 0.4776,
+        "wall_ids": [169, 170, 172, 360, 361],
+        "bbox": [963, 675, 1032, 709],
+        "type": "detected"
+      },
+      {
+        "id": 41,
+        "class": "room",
+        "confidence": 0.4218,
+        "wall_ids": [83, 174, 175, 176],
+        "bbox": [356, 355, 414, 408],
+        "type": "detected"
+      },
+      {
+        "id": 42,
+        "class": "room",
+        "confidence": 0.3863,
+        "wall_ids": [],
+        "bbox": [1246, 157, 1258, 258],
+        "type": "detected"
+      },
+      {
+        "id": 43,
+        "class": "room",
+        "confidence": 0.3803,
+        "wall_ids": [181, 183, 184, 357, 382],
+        "bbox": [973, 604, 1053, 634],
+        "type": "detected"
+      },
+      {
+        "id": 44,
+        "class": "room",
+        "confidence": 0.356,
+        "wall_ids": [],
+        "bbox": [351, 285, 376, 296],
+        "type": "detected"
+      },
+      {
+        "id": 45,
+        "class": "room",
+        "confidence": 0.3393,
+        "wall_ids": [],
+        "bbox": [963, 718, 1025, 762],
+        "type": "detected"
+      },
+      {
+        "id": 46,
+        "class": "room",
+        "confidence": 0.3342,
+        "wall_ids": [48, 195, 371, 372],
+        "bbox": [80, 27, 126, 251],
+        "type": "detected"
+      },
+      {
+        "id": 47,
+        "class": "room",
+        "confidence": 0.3234,
+        "wall_ids": [197, 198, 200, 324],
+        "bbox": [602, 442, 741, 676],
+        "type": "detected"
+      },
+      {
+        "id": 48,
+        "class": "room",
+        "confidence": 0.3185,
+        "wall_ids": [201, 204, 346, 384, 386],
+        "bbox": [973, 43, 1000, 101],
+        "type": "detected"
+      },
+      {
+        "id": 49,
+        "class": "room",
+        "confidence": 0.3152,
+        "wall_ids": [205, 381, 387],
+        "bbox": [1030, 69, 1052, 103],
+        "type": "detected"
+      },
+      {
+        "id": 50,
+        "class": "room",
+        "confidence": 0.3062,
+        "wall_ids": [170, 266, 296, 361],
+        "bbox": [1028, 677, 1127, 763],
+        "type": "detected"
+      },
+      {
+        "id": 51,
+        "class": "room",
+        "confidence": 0.2869,
+        "wall_ids": [104, 184, 263, 326],
+        "bbox": [733, 467, 991, 678],
+        "type": "detected"
+      },
+      {
+        "id": 52,
+        "class": "room",
+        "confidence": 0.283,
+        "wall_ids": [6, 217, 323, 344],
+        "bbox": [80, 455, 128, 677],
+        "type": "detected"
+      },
+      {
+        "id": 53,
+        "class": "room",
+        "confidence": 0.2735,
+        "wall_ids": [223, 336, 386, 387],
+        "bbox": [1003, 69, 1026, 102],
+        "type": "detected"
+      },
+      {
+        "id": 54,
+        "class": "room",
+        "confidence": 0.2543,
+        "wall_ids": [205, 223, 335, 336, 381, 386, 387],
+        "bbox": [1004, 69, 1053, 102],
+        "type": "detected"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# Docs
+docs/
+
+# Data & model weights
+floor_ingestion/data/
+floor_ingestion/utils/
+floor_ingestion/detector/yolo/
+
+# Frontend
+editor-fe/node_modules/
+editor-fe/dist/
+
+# Backend uploads
+editor-be/uploads/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/

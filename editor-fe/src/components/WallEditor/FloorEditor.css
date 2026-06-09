@@ -1,0 +1,183 @@
+/* ── Floor editor shell ──────────────────────────────────────────────────────*/
+
+.content-card--editor {
+  /* content-card already fills the app-body flex container */
+}
+
+.floor-editor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.floor-editor__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 8px 16px;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.floor-editor__header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.floor-editor__header .eyebrow {
+  display: inline-flex;
+  margin-bottom: 2px;
+}
+
+.floor-editor__header p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.floor-editor__warnings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.floor-editor__warning {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(215, 143, 76, 0.1);
+  border: 1px solid rgba(215, 143, 76, 0.3);
+  color: #a0621a;
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.floor-editor__warning::before {
+  content: '⚠';
+  font-size: 0.65rem;
+}
+
+/* ── Editor toolbar ──────────────────────────────────────────────────────────*/
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 16px;
+  background: #fafafa;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.editor-toolbar__group {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding-right: 10px;
+  margin-right: 3px;
+  border-right: 1px solid var(--line);
+}
+
+.editor-toolbar__group:last-of-type {
+  border-right: none;
+}
+
+.editor-toolbar__label {
+  font-size: 0.64rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-right: 3px;
+  white-space: nowrap;
+}
+
+.editor-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 9px;
+  border-radius: 7px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+  white-space: nowrap;
+}
+
+.editor-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(23, 33, 43, 0.22);
+}
+
+.editor-btn--active {
+  background: rgba(28, 107, 94, 0.12);
+  border-color: rgba(28, 107, 94, 0.45);
+  color: var(--accent);
+}
+
+.editor-btn--active:hover {
+  background: rgba(28, 107, 94, 0.18);
+}
+
+.editor-btn--danger {
+  color: var(--danger);
+  border-color: rgba(181, 68, 68, 0.18);
+  background: rgba(181, 68, 68, 0.05);
+}
+
+.editor-btn--danger:hover:not(:disabled) {
+  background: rgba(181, 68, 68, 0.12);
+  border-color: rgba(181, 68, 68, 0.35);
+}
+
+.editor-btn:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+}
+
+.editor-btn__icon {
+  font-size: 0.72rem;
+  opacity: 0.75;
+}
+
+.editor-btn__kbd {
+  font-size: 0.64rem;
+  opacity: 0.55;
+  letter-spacing: 0.02em;
+}
+
+.editor-toolbar__status {
+  margin-left: auto;
+  font-size: 0.74rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
+}
+
+/* ── Canvas area ─────────────────────────────────────────────────────────────*/
+
+.floor-editor__canvas-wrap {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-accent);
+}
+
+.floor-editor__canvas-wrap canvas {
+  display: block;
+}
