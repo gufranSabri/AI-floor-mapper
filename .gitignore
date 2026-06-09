@@ -2,7 +2,7 @@
 .DS_Store
 
 # Docs
-docs/
+# docs/
 
 # Data & model weights
 floor_ingestion/data/
