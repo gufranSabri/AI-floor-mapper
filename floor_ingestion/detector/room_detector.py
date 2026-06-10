@@ -35,9 +35,12 @@ def detect_rooms_from_walls(walls: list[dict]) -> list[dict]:
     rooms = []
     for i, poly in enumerate(all_polys):
         exterior = [list(c) for c in poly.exterior.coords]
+        # i == 0 is the largest polygon — the overall floor boundary.
+        category = "floor_space" if i == 0 else "closed_office"
         rooms.append({
             "id": i + 1,
             "name": "Floor" if i == 0 else f"Room {i}",
+            "category": category,
             "polygon": exterior,
             "area": round(poly.area, 2),
             "status": "active",

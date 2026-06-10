@@ -10,6 +10,7 @@ export function roomsToCanvas(rooms, imgW, imgH, canvasW, canvasH) {
     name: room.name,
     area: room.area,
     status: room.status ?? 'active',
+    category: room.category ?? null,
     wall_ids: room.wall_ids ?? null,   // null = manually drawn (non-wall room)
     points: room.polygon.flatMap(([x, y]) => [
       offsetX + x * scale,
@@ -33,6 +34,7 @@ export function canvasToRooms(rooms, imgW, imgH, canvasW, canvasH) {
       name: room.name,
       area: room.area,
       status: room.status ?? 'active',
+      category: room.category ?? null,
       wall_ids: room.wall_ids ?? null,
       polygon,
     };

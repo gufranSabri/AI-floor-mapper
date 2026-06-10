@@ -18,8 +18,6 @@ app.register_blueprint(process.bp)
 app.register_blueprint(rooms.bp)
 app.register_blueprint(objects.bp)
 
-
-
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", "5001"))
     app.run(host="0.0.0.0", port=port, debug=True)

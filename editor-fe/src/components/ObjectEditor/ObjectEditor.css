@@ -233,6 +233,45 @@
   background: var(--bg-accent);
 }
 
+/* ── Detect modal ────────────────────────────────────────────────────────────*/
+
+.detect-modal__hint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.detect-modal__categories {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.detect-modal__option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.88rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.detect-modal__option input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--accent, #1c6b5e);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.detect-modal__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
 /* ── Toolbar primary variant ─────────────────────────────────────────────────*/
 
 .editor-btn--primary {

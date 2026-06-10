@@ -65,6 +65,15 @@ function reducer(history, action) {
       };
       return { past: [...history.past, present], present: next, future: [] };
 
+    case 'SET_CATEGORY':
+      next = {
+        ...present,
+        rooms: present.rooms.map(r =>
+          r.id === action.payload.id ? { ...r, category: action.payload.category } : r
+        ),
+      };
+      return { past: [...history.past, present], present: next, future: [] };
+
     default:
       return history;
   }
@@ -78,14 +87,15 @@ export function useRoomStore() {
   const canUndo  = history.past.length > 0;
   const canRedo  = history.future.length > 0;
 
-  const undo         = useCallback(() => dispatch({ type: 'UNDO' }), []);
-  const redo         = useCallback(() => dispatch({ type: 'REDO' }), []);
-  const setMode      = useCallback(m  => dispatch({ type: 'SET_MODE',      payload: m }), []);
-  const loadRooms    = useCallback(rs => dispatch({ type: 'LOAD_ROOMS',    payload: rs }), []);
-  const addRoom      = useCallback(r  => dispatch({ type: 'ADD_ROOM',      payload: r }), []);
-  const renameRoom   = useCallback((id, name) => dispatch({ type: 'RENAME_ROOM',   payload: { id, name } }), []);
-  const deleteRoom   = useCallback(id => dispatch({ type: 'DELETE_ROOM',   payload: id }), []);
-  const toggleStatus = useCallback(id => dispatch({ type: 'TOGGLE_STATUS', payload: id }), []);
+  const undo            = useCallback(() => dispatch({ type: 'UNDO' }), []);
+  const redo            = useCallback(() => dispatch({ type: 'REDO' }), []);
+  const setMode         = useCallback(m  => dispatch({ type: 'SET_MODE',      payload: m }), []);
+  const loadRooms       = useCallback(rs => dispatch({ type: 'LOAD_ROOMS',    payload: rs }), []);
+  const addRoom         = useCallback(r  => dispatch({ type: 'ADD_ROOM',      payload: r }), []);
+  const renameRoom      = useCallback((id, name) => dispatch({ type: 'RENAME_ROOM',   payload: { id, name } }), []);
+  const deleteRoom      = useCallback(id => dispatch({ type: 'DELETE_ROOM',   payload: id }), []);
+  const toggleStatus    = useCallback(id => dispatch({ type: 'TOGGLE_STATUS', payload: id }), []);
+  const setCategoryRoom = useCallback((id, category) => dispatch({ type: 'SET_CATEGORY', payload: { id, category } }), []);
 
-  return { state, canUndo, canRedo, undo, redo, setMode, loadRooms, addRoom, renameRoom, deleteRoom, toggleStatus };
+  return { state, canUndo, canRedo, undo, redo, setMode, loadRooms, addRoom, renameRoom, deleteRoom, toggleStatus, setCategoryRoom };
 }

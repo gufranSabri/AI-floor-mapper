@@ -8,7 +8,7 @@ from pathlib import Path
 from flask import Blueprint, send_from_directory, request, jsonify
 from werkzeug.utils import secure_filename
 
-UPLOAD_DIR = Path(__file__).resolve().parents[1] / "uploads"
+UPLOAD_DIR = Path(os.environ.get("OUTPUT_DIR", Path(__file__).resolve().parents[1] / "uploads"))
 
 _FI_ROOT = Path(__file__).resolve().parents[2] / "floor_ingestion"
 if str(_FI_ROOT.parent) not in sys.path:

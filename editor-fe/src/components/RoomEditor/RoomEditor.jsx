@@ -15,11 +15,30 @@ export default function RoomEditor({ floorplan, floorData, onBack, onNext, floor
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
   const [apiRoomsCache, setApiRoomsCache] = useState(null); // image-space rooms after detect/load
-  const [renameTarget, setRenameTarget] = useState(null); // { id, name }
+  const [renameTarget, setRenameTarget] = useState(null); // { id, name, category }
   const [renameValue, setRenameValue] = useState('');
+  const [categoryValue, setCategoryValue] = useState(null);
   const detectionTriggered = useRef(false);
 
-  const { state, setMode, loadRooms, addRoom, renameRoom, deleteRoom, toggleStatus } = useRoomStore();
+  const { state, setMode, loadRooms, addRoom, renameRoom, deleteRoom, toggleStatus, setCategoryRoom } = useRoomStore();
+
+  const CATEGORIES = [
+    { value: 'floor_space',   label: 'Floor Space' },
+    { value: 'closed_office', label: 'Closed Office' },
+    { value: 'open_office',   label: 'Open Office Space' },
+    { value: 'toilet',        label: 'Toilet' },
+    { value: 'other',         label: 'Other' },
+  ];
+
+  const LEGEND = [
+    { label: 'Floor Space',      color: '#ca9900' },
+    { label: 'Closed Office',    color: '#2563eb' },
+    { label: 'Open Office',      color: '#16a34a' },
+    { label: 'Toilet',           color: '#db2777' },
+    { label: 'Other',            color: '#4b5563' },
+  ];
+
+  const AUTO_NAMED = { floor_space: 'Floor', toilet: 'Toilet' };
 
   // Resolve natural image size
   useEffect(() => {
@@ -92,8 +111,9 @@ export default function RoomEditor({ floorplan, floorData, onBack, onNext, floor
       return;
     }
     if (state.mode === 'select') {
-      setRenameTarget({ id: room.id, name: room.name });
+      setRenameTarget({ id: room.id, name: room.name, category: room.category });
       setRenameValue(room.name);
+      setCategoryValue(room.category ?? null);
     }
   }
 
@@ -122,6 +142,7 @@ export default function RoomEditor({ floorplan, floorData, onBack, onNext, floor
       name: `Space ${manualCount}`,
       area: Math.round(area),
       status: 'active',
+      category: 'open_office',
       wall_ids: null,
       points,
     });
@@ -131,6 +152,7 @@ export default function RoomEditor({ floorplan, floorData, onBack, onNext, floor
     if (!renameTarget) return;
     const trimmed = renameValue.trim();
     if (trimmed) renameRoom(renameTarget.id, trimmed);
+    if (categoryValue !== renameTarget.category) setCategoryRoom(renameTarget.id, categoryValue);
     setRenameTarget(null);
   }
 
@@ -216,12 +238,20 @@ export default function RoomEditor({ floorplan, floorData, onBack, onNext, floor
             size={canvasSize}
           />
         )}
+        <div className="room-legend">
+          {LEGEND.map(({ label, color }) => (
+            <div key={label} className="room-legend__item">
+              <span className="room-legend__dot" style={{ background: color }} />
+              {label}
+            </div>
+          ))}
+        </div>
       </div>
 
       {renameTarget && (
         <div className="room-rename-backdrop" onClick={() => setRenameTarget(null)}>
           <div className="room-rename-modal" onClick={e => e.stopPropagation()}>
-            <h3 className="room-rename-modal__title">Rename Room</h3>
+            <h3 className="room-rename-modal__title">Edit Space</h3>
             <input
               className="text-input"
               value={renameValue}
@@ -230,14 +260,33 @@ export default function RoomEditor({ floorplan, floorData, onBack, onNext, floor
                 if (e.key === 'Enter') commitRename();
                 if (e.key === 'Escape') setRenameTarget(null);
               }}
-              autoFocus
+              disabled={categoryValue in AUTO_NAMED}
+              autoFocus={!(categoryValue in AUTO_NAMED)}
             />
+            <div className="room-category-group">
+              <span className="room-category-group__label">Space category</span>
+              {CATEGORIES.map(({ value, label }) => (
+                <label key={value} className="room-category-option">
+                  <input
+                    type="radio"
+                    name="room-category"
+                    value={value}
+                    checked={categoryValue === value}
+                    onChange={() => {
+                      setCategoryValue(value);
+                      if (value in AUTO_NAMED) setRenameValue(AUTO_NAMED[value]);
+                    }}
+                  />
+                  {label}
+                </label>
+              ))}
+            </div>
             <div className="room-rename-modal__actions">
               <button className="button button--ghost" type="button" onClick={() => setRenameTarget(null)}>
                 Cancel
               </button>
               <button className="button button--primary" type="button" onClick={commitRename}>
-                Rename
+                Save
               </button>
             </div>
           </div>

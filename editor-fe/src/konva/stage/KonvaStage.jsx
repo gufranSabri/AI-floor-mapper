@@ -7,6 +7,7 @@ import { containFit } from '../utils';
 const ZOOM_MIN = 0.25;
 const ZOOM_MAX = 10;
 const ZOOM_FACTOR = 1.08;
+const MIDDLE_BUTTON = 1;
 
 // ── ImageLayer ────────────────────────────────────────────────────────────────
 // Renders an image letterboxed inside the canvas with an optional tint overlay.
@@ -55,6 +56,7 @@ export default function KonvaStage({
 }) {
   const stageRef = useRef();
   const [, setViewport] = useState({ x: 0, y: 0, scale: 1 });
+  const midPanActive = useRef(false);
   const isPan = mode === 'pan';
 
   function getContentPointer() {
@@ -82,12 +84,12 @@ export default function KonvaStage({
   }
 
   function handleDragMove(e) {
-    if (!isPan) return;
+    if (!isPan && !midPanActive.current) return;
     setViewport(v => ({ ...v, x: e.target.x(), y: e.target.y() }));
   }
 
   function handleClick(e) {
-    if (isPan) return;
+    if (isPan || midPanActive.current) return;
     // In passthrough modes (e.g. door placement) every click counts, not just bare-stage clicks.
     if (!passThroughClick && e.target !== e.target.getStage() && e.target.name() !== 'bg') return;
     onStageClick?.(getContentPointer(), e);
@@ -97,11 +99,22 @@ export default function KonvaStage({
     onStageMouseMove?.(getContentPointer());
   }
 
-  function handleMouseDown() {
+  function handleMouseDown(e) {
+    if (e.evt.button === MIDDLE_BUTTON) {
+      e.evt.preventDefault();
+      midPanActive.current = true;
+      stageRef.current.startDrag();
+      return;
+    }
     if (!isPan) onStageMouseDown?.(getContentPointer());
   }
 
-  function handleMouseUp() {
+  function handleMouseUp(e) {
+    if (e.evt.button === MIDDLE_BUTTON) {
+      midPanActive.current = false;
+      stageRef.current.stopDrag();
+      return;
+    }
     if (!isPan) onStageMouseUp?.(getContentPointer());
   }
 
@@ -119,6 +132,7 @@ export default function KonvaStage({
       onMouseMove={handleMouseMove}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
+      onContextMenu={(e) => { if (e.evt.button === MIDDLE_BUTTON) e.evt.preventDefault(); }}
     >
       {imageUrl && (
         <Layer listening={false}>

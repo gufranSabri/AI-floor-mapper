@@ -8,7 +8,7 @@ from werkzeug.utils import secure_filename
 
 from .signed_url import sign_path, verify_path
 
-UPLOAD_DIR = Path(__file__).resolve().parents[1] / "uploads"
+UPLOAD_DIR = Path(os.environ.get("OUTPUT_DIR", Path(__file__).resolve().parents[1] / "uploads"))
 ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "webp", "gif"}
 
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { Stage, Layer, Image as KonvaImage, Rect, Text, Group } from 'react-konva';
+import { Stage, Layer, Image as KonvaImage, Rect, Group } from 'react-konva';
 import useImage from 'use-image';
 import { useContainerSize } from '../../konva';
 import { containFit } from '../../konva/utils';
@@ -10,6 +10,39 @@ import './ObjectEditor.css';
 const ZOOM_MIN    = 0.25;
 const ZOOM_MAX    = 10;
 const ZOOM_FACTOR = 1.08;
+
+const DETECT_CATEGORIES = [
+  { value: 'floor_space',   label: 'Floor Space',       color: '#ca9900' },
+  { value: 'closed_office', label: 'Closed Office',     color: '#2563eb' },
+  { value: 'open_office',   label: 'Open Office Space', color: '#16a34a' },
+  { value: 'toilet',        label: 'Toilet',            color: '#db2777' },
+  { value: 'other',         label: 'Other',             color: '#4b5563' },
+];
+const DEFAULT_DETECT_CATEGORIES = new Set(['floor_space', 'closed_office', 'open_office']);
+
+function pointInPolygon(px, py, polygon) {
+  let inside = false;
+  const n = polygon.length;
+  for (let i = 0, j = n - 1; i < n; j = i++) {
+    const [xi, yi] = polygon[i];
+    const [xj, yj] = polygon[j];
+    const intersect = (yi > py) !== (yj > py) && px < ((xj - xi) * (py - yi)) / (yj - yi) + xi;
+    if (intersect) inside = !inside;
+  }
+  return inside;
+}
+
+function filterBboxesByCategory(bboxes, rooms, categories) {
+  if (!rooms?.length) return bboxes;
+  return bboxes.filter(bbox => {
+    const cx = bbox.x + bbox.w / 2;
+    const cy = bbox.y + bbox.h / 2;
+    const hits = rooms.filter(r => r.polygon && pointInPolygon(cx, cy, r.polygon));
+    if (!hits.length) return true;
+    const room = hits.reduce((best, r) => r.area < best.area ? r : best);
+    return categories.has(room.category ?? 'floor_space');
+  });
+}
 
 // ── DetectionCanvas ───────────────────────────────────────────────────────────
 // Proper React component (no conditional returns before hooks).
@@ -35,7 +68,8 @@ function DetectionCanvas({
   const [hoveredKey, setHoveredKey] = useState(null);
 
   // draw state — kept in refs so window-level handlers always see current values
-  const drawStart  = useRef(null);  // content-space start point
+  const drawStart    = useRef(null);  // content-space start point
+  const midPanActive = useRef(false);
   const [drawRect, setDrawRect] = useState(null); // content-space rect for live preview
 
   const isPan    = mode === 'pan';
@@ -89,6 +123,7 @@ function DetectionCanvas({
     }
 
     function onDown(e) {
+      if (e.button === 1) return; // middle button handled separately for panning
       // ignore if click is not on the canvas element
       const stage = stageRef.current;
       if (!stage) return;
@@ -135,6 +170,7 @@ function DetectionCanvas({
     }
 
     function onUp(e) {
+      if (e.button === 1) return; // middle button handled separately for panning
       if (!drawStart.current) return;
       const stage = stageRef.current;
       if (!stage) return;
@@ -196,6 +232,21 @@ function DetectionCanvas({
 
   const cursor = isPan ? 'grab' : isDrawing ? 'crosshair' : isDelete ? 'not-allowed' : 'default';
 
+  function handleStageMouseDown(e) {
+    if (e.evt.button === 1) {
+      e.evt.preventDefault();
+      midPanActive.current = true;
+      stageRef.current.startDrag();
+    }
+  }
+
+  function handleStageMouseUp(e) {
+    if (e.evt.button === 1) {
+      midPanActive.current = false;
+      stageRef.current.stopDrag();
+    }
+  }
+
   return (
     <Stage
       ref={stageRef}
@@ -205,6 +256,8 @@ function DetectionCanvas({
       draggable={isPan}
       onDragMove={() => forceRender(n => n + 1)}
       onWheel={handleWheel}
+      onMouseDown={handleStageMouseDown}
+      onMouseUp={handleStageMouseUp}
     >
       <Layer listening={false}>
         <KonvaImage image={image} x={offsetX} y={offsetY} width={fitW} height={fitH} />
@@ -231,13 +284,6 @@ function DetectionCanvas({
               <Rect x={x} y={y} width={w} height={h}
                 stroke={stroke} strokeWidth={isHovered ? 2.5 : 1.5}
                 fill={fill} cornerRadius={2} />
-              <Text
-                x={x + 3} y={y + 3}
-                text={det.score != null
-                  ? `${objectName} ${(det.score * 100).toFixed(0)}%`
-                  : objectName}
-                fontSize={10} fill={stroke} fontStyle="bold"
-              />
             </Group>
           );
         })}
@@ -278,6 +324,8 @@ export default function ObjectEditor({ floorplan, floorData, floorName, onBack, 
 
   const [detections, setDetections] = useState({});
   const [detecting,  setDetecting]  = useState(false);
+  const [showDetectModal,  setShowDetectModal]  = useState(false);
+  const [detectCategories, setDetectCategories] = useState(new Set(DEFAULT_DETECT_CATEGORIES));
 
   const visibleDetections = selectedObject
     ? (detections[selectedObject] ?? []).map((det, idx) => ({ objectName: selectedObject, idx, det }))
@@ -366,7 +414,8 @@ export default function ObjectEditor({ floorplan, floorData, floorName, onBack, 
 
   // ── detection ───────────────────────────────────────────────────────────────
 
-  async function runDetection() {
+  async function runDetection(categories) {
+    setShowDetectModal(false);
     if (!floorName || !selectedObject) return;
     setDetecting(true);
     try {
@@ -376,7 +425,10 @@ export default function ObjectEditor({ floorplan, floorData, floorName, onBack, 
         body: JSON.stringify({ threshold: 0.7, iou_threshold: 0.4, object_filter: selectedObject }),
       });
       const data = await r.json();
-      setDetections(prev => ({ ...prev, [selectedObject]: data[selectedObject] ?? [] }));
+      const rooms = floorData?.elements?.rooms ?? [];
+      const detected = data[selectedObject] ?? [];
+      const filtered = filterBboxesByCategory(detected, rooms, categories);
+      setDetections(prev => ({ ...prev, [selectedObject]: filtered }));
     } catch (e) { console.error(e); }
     finally { setDetecting(false); }
   }
@@ -482,7 +534,7 @@ export default function ObjectEditor({ floorplan, floorData, floorName, onBack, 
       <ObjectToolbar
         mode={mode}
         setMode={setMode}
-        onDetect={runDetection}
+        onDetect={() => setShowDetectModal(true)}
         detecting={detecting}
         disabled={isCropMode}
         selectedObject={selectedObject}
@@ -611,6 +663,52 @@ export default function ObjectEditor({ floorplan, floorData, floorName, onBack, 
                 disabled={saving || !objectName.trim()}
               >
                 {saving ? 'Saving…' : 'Save'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showDetectModal && (
+        <div className="room-rename-backdrop" onClick={() => setShowDetectModal(false)}>
+          <div className="room-rename-modal" onClick={e => e.stopPropagation()}>
+            <h3 className="room-rename-modal__title">Detect Objects In</h3>
+            <p className="detect-modal__hint">
+              Detections outside the selected space types will be removed.
+            </p>
+            <div className="detect-modal__categories">
+              {DETECT_CATEGORIES.map(({ value, label, color }) => {
+                const checked = detectCategories.has(value);
+                return (
+                  <label key={value} className="detect-modal__option">
+                    <input
+                      type="checkbox"
+                      checked={checked}
+                      onChange={() => {
+                        setDetectCategories(prev => {
+                          const next = new Set(prev);
+                          if (next.has(value)) next.delete(value); else next.add(value);
+                          return next;
+                        });
+                      }}
+                    />
+                    <span className="detect-modal__dot" style={{ background: color }} />
+                    {label}
+                  </label>
+                );
+              })}
+            </div>
+            <div className="room-rename-modal__actions">
+              <button className="button button--ghost" type="button" onClick={() => setShowDetectModal(false)}>
+                Cancel
+              </button>
+              <button
+                className="button button--primary"
+                type="button"
+                onClick={() => runDetection(detectCategories)}
+                disabled={detectCategories.size === 0}
+              >
+                Detect
               </button>
             </div>
           </div>

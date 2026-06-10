@@ -18,32 +18,30 @@ export function hitTestRooms(px, py, rooms) {
   return hits.reduce((best, r) => (r.area < best.area ? r : best));
 }
 
-// Semantic fill colours:
-//   index 0  = floor boundary  → light teal
-//   active   → green
-//   inactive → grey
-const COLOURS = {
-  floor:          { fill: 'rgba(234,179,8,0.15)',   fillHover: 'rgba(234,179,8,0.32)',   stroke: 'rgba(234,179,8,0.55)'  },
-  active:         { fill: 'rgba(34,197,94,0.15)',   fillHover: 'rgba(34,197,94,0.32)',   stroke: 'rgba(34,197,94,0.55)'  },
-  activeDelete:   { fill: 'rgba(34,197,94,0.15)',   fillHover: 'rgba(181,68,68,0.28)',   stroke: 'rgba(181,68,68,0.60)'  },
-  inactive:       { fill: 'rgba(239,68,68,0.15)',   fillHover: 'rgba(239,68,68,0.30)',   stroke: 'rgba(239,68,68,0.55)'  },
-  inactiveDelete: { fill: 'rgba(239,68,68,0.15)',   fillHover: 'rgba(181,68,68,0.35)',   stroke: 'rgba(181,68,68,0.65)'  },
+const CATEGORY_COLOURS = {
+  floor_space:   { fill: 'rgba(234,179,8,0.15)',   fillHover: 'rgba(234,179,8,0.32)',   stroke: 'rgba(202,153,0,0.75)'   },
+  closed_office: { fill: 'rgba(59,130,246,0.15)',  fillHover: 'rgba(59,130,246,0.30)',  stroke: 'rgba(37,99,235,0.75)'   },
+  open_office:   { fill: 'rgba(34,197,94,0.15)',   fillHover: 'rgba(34,197,94,0.32)',   stroke: 'rgba(22,163,74,0.75)'   },
+  toilet:        { fill: 'rgba(236,72,153,0.15)',  fillHover: 'rgba(236,72,153,0.30)',  stroke: 'rgba(219,39,119,0.75)'  },
+  other:         { fill: 'rgba(107,114,128,0.15)', fillHover: 'rgba(107,114,128,0.30)', stroke: 'rgba(75,85,99,0.75)'    },
 };
 
-export function roomColours(isFloor, status, mode, hovered) {
+const DELETE_HOVER = { fill: 'rgba(181,68,68,0.28)', stroke: 'rgba(181,68,68,0.70)' };
+const INACTIVE     = { fill: 'rgba(239,68,68,0.12)', fillHover: 'rgba(239,68,68,0.25)', stroke: 'rgba(239,68,68,0.55)' };
+
+export function categoryStroke(category) {
+  return (CATEGORY_COLOURS[category] ?? CATEGORY_COLOURS.floor_space).stroke;
+}
+
+export function roomColours(category, status, mode, hovered) {
   const isDelete = mode === 'delete';
 
-  if (isFloor) {
-    const c = COLOURS.floor;
-    return { fill: hovered ? c.fillHover : c.fill, stroke: c.stroke };
-  }
-
   if (status === 'inactive') {
-    const c = isDelete ? COLOURS.inactiveDelete : COLOURS.inactive;
-    return { fill: hovered ? c.fillHover : c.fill, stroke: c.stroke };
+    if (isDelete && hovered) return { fill: DELETE_HOVER.fill, stroke: DELETE_HOVER.stroke };
+    return { fill: hovered ? INACTIVE.fillHover : INACTIVE.fill, stroke: INACTIVE.stroke };
   }
 
-  // active
-  const c = isDelete ? COLOURS.activeDelete : COLOURS.active;
+  if (isDelete && hovered) return { fill: DELETE_HOVER.fill, stroke: DELETE_HOVER.stroke };
+  const c = CATEGORY_COLOURS[category] ?? CATEGORY_COLOURS.floor_space;
   return { fill: hovered ? c.fillHover : c.fill, stroke: c.stroke };
 }
